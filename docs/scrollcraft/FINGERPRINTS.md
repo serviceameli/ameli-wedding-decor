@@ -28,9 +28,9 @@ changes only grammar and world will fail it.
 
 | Build | Grammar | Nav treatment | Hero device | Act-sequence shape | Close pattern | Signature move | World | Port |
 |---|---|---|---|---|---|---|---|---|
+| Амели, 2026-09-10 | Gallery | Quiet sticky commerce header | Two independent photographic frames | Hero → directory → selectable collection → dark editorial → steps → FAQ → invitation | Warm invitation and persistent selection | A photographic wedding selection accumulates across categories and pages | Ivory, champagne, muted gold, original rental photography | 5173 / GitHub Pages |
 
-*(empty: your first build has nothing to clear, so build whatever the interview
-points at. From the second onwards, this table is the constraint.)*
+First completed build; no previous rows to compare.
 
 ---
 
@@ -41,7 +41,7 @@ reusing: a grammar, a nav treatment, a close pattern, a signature move, an
 act-count-and-length band. The shared columns are what the next build inherits
 as a constraint, so writing them down is the whole point.
 
-Nothing is taken yet.
+- Gallery that becomes a wedding selection: independent editorial hero frames, six category directories, photographic cart and shared selected-zone indicators across separate pages.
 
 ---
 

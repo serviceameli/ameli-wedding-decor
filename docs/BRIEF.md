@@ -20,7 +20,7 @@ Layer contract: far paper background, large photographic wedding scene, foregrou
 
 Score: opening layered parallax; catalog natural flow with working selection; editorial media parallax and one-time text reveal; process staggered entry; FAQ native disclosures; close held static. Functional catalog takes precedence over the skill's four animation-family quota. No unused effects are added for a quota.
 
-Fingerprint registry: new local workspace /tmp/ameli-scroll-work, no prior project rows. Existing unrelated projects were not treated as prior builds.
+Fingerprint registry: workspace resolved through .scrollcraft.json to docs/scrollcraft, no prior project rows. Existing unrelated projects were not treated as prior builds.
 
 Preflight: Node and Chrome available. ffmpeg missing; no video encoding or video assets in this build, so the video-only dependency is unnecessary. No paid asset API used. Browser validation uses the provided CUA environment rather than a separate Playwright session.
 
