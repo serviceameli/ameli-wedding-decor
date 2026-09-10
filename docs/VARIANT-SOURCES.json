@@ -1,0 +1,2249 @@
+{
+  "checkedOn": "2026-09-10",
+  "note": "Public catalog snapshot. Exact component quantities kept as listed, including differences that may need owner review. No inventory imported.",
+  "products": [
+    {
+      "productId": "demo-ceremony-01",
+      "demoId": "demo-ceremony-01",
+      "slug": "zony-tseremonii-fow",
+      "id": 23467,
+      "name": "Зона церемонии на 40 гостей без флористики",
+      "price": 43000,
+      "rentalDays": 3,
+      "description": "<p>Зона&nbsp;церемонии&nbsp;может&nbsp;быть&nbsp;выполнена&nbsp;в&nbsp;любой&nbsp;цветовой&nbsp;гамме.</p><p></p><p>На&nbsp;скамейках&nbsp;с&nbsp;комфортом&nbsp;рассаживается&nbsp;3-4&nbsp;гостя.</p><p></p><p>Вы&nbsp;можете&nbsp;изменить&nbsp;количество&nbsp;и&nbsp;тип&nbsp;посадочных&nbsp;мест&nbsp;(ознакомьтесь&nbsp;с&nbsp;ассортиментом&nbsp;пуфов&nbsp;и&nbsp;стульев&nbsp;в&nbsp;нашем&nbsp;каталоге).</p><p></p><p>Зона&nbsp;церемонии&nbsp;представлена&nbsp;без&nbsp;флористики.&nbsp;Флористики&nbsp;вы&nbsp;можете&nbsp;подобрать&nbsp;в&nbsp;разделе&nbsp;&quot;Флористика&nbsp;для&nbsp;зон&nbsp;церемонии&quot;.&nbsp;Флористические&nbsp;композиции&nbsp;мы&nbsp;делаем&nbsp;только&nbsp;при&nbsp;заказе&nbsp;оформления&nbsp;мероприятия&nbsp;под&nbsp;ключ.&nbsp;За&nbsp;подробностями&nbsp;обращайтесь&nbsp;к&nbsp;менеджеру</p><p></p><p><strong>Обратите&nbsp;внимание&nbsp;-&nbsp;стоимость&nbsp;зоны&nbsp;церемонии&nbsp;указана&nbsp;без&nbsp;учета&nbsp;монтажа.&nbsp;Стоимость&nbsp;доставки&nbsp;и&nbsp;монтажа&nbsp;расчитывается&nbsp;после&nbsp;оформления&nbsp;заказа</strong></p>",
+      "image": "https://cdn.frents.ru/ameli-rental/082ee9f2-f4b5-46cc-8728-6ba9f5f44f96_арка_волна_с_лавками_мал.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/zony-tseremonii-fow/23467",
+      "variants": [
+        {
+          "id": 20040,
+          "name": "Зона церемонии на 28 гостей",
+          "title": "Варианты церемоний",
+          "price": 54800,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 20790,
+          "name": "Зона церемонии на 40 гостей c флористикой",
+          "title": "Варианты церемоний",
+          "price": 88040,
+          "visible": true,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 12197,
+          "name": "Скамейка складная \"Флэт\"  кокосовый раф бархат",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/9153441d-5d9a-4afd-9812-666163393fc9_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/skamejki-pxt/12197"
+        },
+        {
+          "id": 19133,
+          "name": "Задник \"Белатрикс\" с драпировкой, жемчужный бархат",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/be4470cf-5df1-4ff4-a5c1-e359184bdc3d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/19133"
+        },
+        {
+          "id": 20039,
+          "name": "Бархат для дорожки 10м",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/b8df41c1-7cf7-4dbd-8cf0-1f281b057ed8_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/20039"
+        }
+      ]
+    },
+    {
+      "productId": "demo-ceremony-01",
+      "id": 20040,
+      "name": "Зона церемонии на 28 гостей",
+      "price": 54800,
+      "rentalDays": 3,
+      "description": "<p>Зона&nbsp;церемонии&nbsp;может&nbsp;быть&nbsp;выполнена&nbsp;в&nbsp;любой&nbsp;цветовой&nbsp;гамме.</p><p></p><p>Вы&nbsp;можете&nbsp;изменить&nbsp;количество&nbsp;и&nbsp;тип&nbsp;посадочных&nbsp;мест&nbsp;(ознакомьтесь&nbsp;с&nbsp;ассортиментом&nbsp;пуфов&nbsp;и&nbsp;стульев&nbsp;в&nbsp;нашем&nbsp;каталоге).</p><p></p><p>Зона&nbsp;церемонии&nbsp;представлена&nbsp;без&nbsp;флористики.&nbsp;Флористики&nbsp;вы&nbsp;можете&nbsp;подобрать&nbsp;в&nbsp;разделе&nbsp;&quot;Флористика&nbsp;для&nbsp;зон&nbsp;церемонии&quot;.&nbsp;Флористические&nbsp;композиции&nbsp;мы&nbsp;делаем&nbsp;только&nbsp;при&nbsp;заказе&nbsp;оформления&nbsp;мероприятия&nbsp;под&nbsp;ключ.&nbsp;За&nbsp;подробностями&nbsp;обращайтесь&nbsp;к&nbsp;менеджеру</p><p></p><p><strong>Обратите&nbsp;внимание&nbsp;-&nbsp;стоимость&nbsp;зоны&nbsp;церемонии&nbsp;указана&nbsp;без&nbsp;учета&nbsp;монтажа.&nbsp;Стоимость&nbsp;доставки&nbsp;и&nbsp;монтажа&nbsp;расчитывается&nbsp;после&nbsp;оформления&nbsp;заказа</strong></p>",
+      "image": "https://cdn.frents.ru/ameli-rental/fea89754-9fbd-456b-92cd-8eb3ab2592a6_арка_волна_розовая_фиолет.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/zony-tseremonii-fow/20040",
+      "variants": [
+        {
+          "id": 20790,
+          "name": "Зона церемонии на 40 гостей c флористикой",
+          "title": "Варианты церемоний",
+          "price": 88040,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 20059,
+          "name": "Зона церемонии на 40 гостей без флористики",
+          "title": "Варианты церемоний",
+          "price": 65000,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 23467,
+          "name": "Зона церемонии на 40 гостей без флористики",
+          "title": "Варианты церемоний",
+          "price": 43000,
+          "visible": true,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 10163,
+          "name": "Пуфик \"Фуфик\" мини фиолетовый люпин бархат",
+          "quantity": 28,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/b0fed372-2957-42ec-b33f-52647fabf05b_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/pufy-fufik-znh-byq-zef-qay-fbe-qwg-knd-oea/10163"
+        },
+        {
+          "id": 19134,
+          "name": "Задник \"Белатрикс\" с драпировкой, бледно-розовый бархат",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/d389c6d7-d565-4d04-b68b-cf261cbac624_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/19134"
+        },
+        {
+          "id": 20039,
+          "name": "Бархат для дорожки 10м",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/b8df41c1-7cf7-4dbd-8cf0-1f281b057ed8_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/20039"
+        }
+      ]
+    },
+    {
+      "productId": "demo-ceremony-01",
+      "id": 20790,
+      "name": "Зона церемонии на 40 гостей c флористикой",
+      "price": 88040,
+      "rentalDays": 3,
+      "description": "<p>Зона&nbsp;церемонии&nbsp;может&nbsp;быть&nbsp;выполнена&nbsp;в&nbsp;любой&nbsp;цветовой&nbsp;гамме.</p><p></p><p>Флористика&nbsp;белая&nbsp;из&nbsp;декоративных&nbsp;цветов&nbsp;(можно&nbsp;добавить&nbsp;цветные&nbsp;акценты)</p><p></p><p>Вы&nbsp;можете&nbsp;изменить&nbsp;количество&nbsp;и&nbsp;тип&nbsp;посадочных&nbsp;мест&nbsp;(ознакомьтесь&nbsp;с&nbsp;ассортиментом&nbsp;пуфов&nbsp;и&nbsp;стульев&nbsp;в&nbsp;нашем&nbsp;каталоге).</p><p></p><p>Флористические&nbsp;композиции&nbsp;мы&nbsp;делаем&nbsp;только&nbsp;при&nbsp;заказе&nbsp;оформления&nbsp;мероприятия&nbsp;под&nbsp;ключ.&nbsp;За&nbsp;подробностями&nbsp;обращайтесь&nbsp;к&nbsp;менеджеру</p><p></p><p><strong>Обратите&nbsp;внимание&nbsp;-&nbsp;стоимость&nbsp;зоны&nbsp;церемонии&nbsp;указана&nbsp;без&nbsp;учета&nbsp;монтажа.&nbsp;Стоимость&nbsp;доставки&nbsp;и&nbsp;монтажа&nbsp;рассчитывается&nbsp;после&nbsp;оформления&nbsp;заказа</strong></p>",
+      "image": "https://cdn.frents.ru/ameli-rental/ccb63a8f-f836-4318-8e3f-33c88f3804fa_арка_волна_тотал_кокос_раф_цветы.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/zony-tseremonii-fow/20790",
+      "variants": [
+        {
+          "id": 20040,
+          "name": "Зона церемонии на 28 гостей",
+          "title": "Варианты церемоний",
+          "price": 54800,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 20059,
+          "name": "Зона церемонии на 40 гостей без флористики",
+          "title": "Варианты церемоний",
+          "price": 65000,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 23467,
+          "name": "Зона церемонии на 40 гостей без флористики",
+          "title": "Варианты церемоний",
+          "price": 43000,
+          "visible": true,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 5367,
+          "name": "Пуфик \"Фуфик\" мини кокосовый раф бархат",
+          "quantity": 40,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3d8245cb-d0fa-4b3e-a842-26296ddcc8de_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/pufy-fufik-znh-byq-zef-qay-fbe-qwg-knd-oea/5367"
+        },
+        {
+          "id": 19136,
+          "name": "Задник \"Белатрикс\" с драпировкой, кокосовый раф бархат",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/f7478016-229f-4c49-9f01-3a95541fa1b3_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/19136"
+        },
+        {
+          "id": 20039,
+          "name": "Бархат для дорожки 10м",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/b8df41c1-7cf7-4dbd-8cf0-1f281b057ed8_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/20039"
+        },
+        {
+          "id": 20061,
+          "name": "Флористическая композиция к зоне церемонии Белатрикс из декоративных цветов",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/80c2b869-6884-4770-8da9-de09a4693eb6_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/floristicheskie-kompozitsii-tehnicheskaja-kategorija-amh/20061"
+        }
+      ]
+    },
+    {
+      "productId": "demo-table-01",
+      "demoId": "demo-table-01",
+      "slug": "gostevye-stoly-bop",
+      "id": 17906,
+      "name": "Сет \"Изысканный жемчуг\" на 8 персон Базовый",
+      "price": 13780,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/e7b1d5da-7990-485c-9aaa-46a11066264b_0d29acfe-89e6-4027-af77-89cc36795ed9-0.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-bop/17906",
+      "variants": [
+        {
+          "id": 17907,
+          "name": "Сет \"Изысканный жемчуг\" на 8 персон Оптимальный",
+          "title": "Варианты сетов",
+          "price": 16420,
+          "visible": false,
+          "alternative": true
+        },
+        {
+          "id": 17908,
+          "name": "Сет \"Изысканный жемчуг\" на 8 персон Премиум",
+          "title": "Варианты сетов",
+          "price": 21100,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 5799,
+          "name": "Скатерть бархатная \"Бета\" жемчужная круглая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/62db426a-8e90-48ab-b062-928c83b04a80_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/kruglye-skaterti-azl-nmg-ear/5799"
+        },
+        {
+          "id": 5803,
+          "name": "Салфетка бархатная \"Бета\" жемчужная",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/49ca1755-137a-48e8-b93a-e780f2c859ae_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5803"
+        },
+        {
+          "id": 6145,
+          "name": "Стул \"Вашингтон\" золотой, жемчужный бархат",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/75864664-8bf2-49f1-84e1-4eeac2b11439_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6145"
+        }
+      ]
+    },
+    {
+      "productId": "demo-table-01",
+      "id": 17907,
+      "name": "Сет \"Изысканный жемчуг\" на 8 персон Оптимальный",
+      "price": 16420,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/4799875e-fd59-41ce-945a-c1463a3c74fb_0d29acfe-89e6-4027-af77-89cc36795ed9-0.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-bop/17907",
+      "variants": [
+        {
+          "id": 17906,
+          "name": "Сет \"Изысканный жемчуг\" на 8 персон Базовый",
+          "title": "Варианты сетов",
+          "price": 13780,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 17908,
+          "name": "Сет \"Изысканный жемчуг\" на 8 персон Премиум",
+          "title": "Варианты сетов",
+          "price": 21100,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 3098,
+          "name": "Бокал \"Лавлейс\" прозрачный винный",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/ad357c03-5991-4f12-abb1-489e7527f382_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3098"
+        },
+        {
+          "id": 5799,
+          "name": "Скатерть бархатная \"Бета\" жемчужная круглая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/62db426a-8e90-48ab-b062-928c83b04a80_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/kruglye-skaterti-azl-nmg-ear/5799"
+        },
+        {
+          "id": 5803,
+          "name": "Салфетка бархатная \"Бета\" жемчужная",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/49ca1755-137a-48e8-b93a-e780f2c859ae_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5803"
+        },
+        {
+          "id": 6145,
+          "name": "Стул \"Вашингтон\" золотой, жемчужный бархат",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/75864664-8bf2-49f1-84e1-4eeac2b11439_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6145"
+        },
+        {
+          "id": 11206,
+          "name": "Тарелка \"Кюри\" белая большая",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/bc7551e8-3c1f-41c0-ad2a-0cf20b7ee019_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/11206"
+        }
+      ]
+    },
+    {
+      "productId": "demo-table-01",
+      "id": 17908,
+      "name": "Сет \"Изысканный жемчуг\" на 8 персон Премиум",
+      "price": 21100,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/35ac5512-b1cd-4e97-af40-22916eea7e9b_0d29acfe-89e6-4027-af77-89cc36795ed9-0.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-bop/17908",
+      "variants": [
+        {
+          "id": 17906,
+          "name": "Сет \"Изысканный жемчуг\" на 8 персон Базовый",
+          "title": "Варианты сетов",
+          "price": 13780,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 17907,
+          "name": "Сет \"Изысканный жемчуг\" на 8 персон Оптимальный",
+          "title": "Варианты сетов",
+          "price": 16420,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 2923,
+          "name": "Набор приборов \"Сафо\" золотых 2 шт",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/050533a9-423c-4f05-8430-b64cd3155b28_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2923"
+        },
+        {
+          "id": 3093,
+          "name": "Стакан \"Лавлейс\" прозрачный",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/4f4f2504-3edc-41f5-a64a-f07078ea148b_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3093"
+        },
+        {
+          "id": 3096,
+          "name": "Бокал \"Лавлейс\" прозрачный под шампанское",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/42601864-92db-44e5-9c47-ff8c11dc5723_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3096"
+        },
+        {
+          "id": 3098,
+          "name": "Бокал \"Лавлейс\" прозрачный винный",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/ad357c03-5991-4f12-abb1-489e7527f382_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3098"
+        },
+        {
+          "id": 5799,
+          "name": "Скатерть бархатная \"Бета\" жемчужная круглая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/62db426a-8e90-48ab-b062-928c83b04a80_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/kruglye-skaterti-azl-nmg-ear/5799"
+        },
+        {
+          "id": 5803,
+          "name": "Салфетка бархатная \"Бета\" жемчужная",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/49ca1755-137a-48e8-b93a-e780f2c859ae_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5803"
+        },
+        {
+          "id": 6145,
+          "name": "Стул \"Вашингтон\" золотой, жемчужный бархат",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/75864664-8bf2-49f1-84e1-4eeac2b11439_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6145"
+        },
+        {
+          "id": 11207,
+          "name": "Набор тарелок \"Кюри\" белых",
+          "quantity": 8,
+          "image": "https://cdn.frents.ru/ameli-rental/1adb98e2-44d2-416a-a95a-d6a2461aa3da_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/11207"
+        }
+      ]
+    },
+    {
+      "productId": "demo-ceremony-02",
+      "demoId": "demo-ceremony-02",
+      "slug": "zony-tseremonii-fow",
+      "id": 20790,
+      "name": "Зона церемонии на 40 гостей c флористикой",
+      "price": 88040,
+      "rentalDays": 3,
+      "description": "<p>Зона&nbsp;церемонии&nbsp;может&nbsp;быть&nbsp;выполнена&nbsp;в&nbsp;любой&nbsp;цветовой&nbsp;гамме.</p><p></p><p>Флористика&nbsp;белая&nbsp;из&nbsp;декоративных&nbsp;цветов&nbsp;(можно&nbsp;добавить&nbsp;цветные&nbsp;акценты)</p><p></p><p>Вы&nbsp;можете&nbsp;изменить&nbsp;количество&nbsp;и&nbsp;тип&nbsp;посадочных&nbsp;мест&nbsp;(ознакомьтесь&nbsp;с&nbsp;ассортиментом&nbsp;пуфов&nbsp;и&nbsp;стульев&nbsp;в&nbsp;нашем&nbsp;каталоге).</p><p></p><p>Флористические&nbsp;композиции&nbsp;мы&nbsp;делаем&nbsp;только&nbsp;при&nbsp;заказе&nbsp;оформления&nbsp;мероприятия&nbsp;под&nbsp;ключ.&nbsp;За&nbsp;подробностями&nbsp;обращайтесь&nbsp;к&nbsp;менеджеру</p><p></p><p><strong>Обратите&nbsp;внимание&nbsp;-&nbsp;стоимость&nbsp;зоны&nbsp;церемонии&nbsp;указана&nbsp;без&nbsp;учета&nbsp;монтажа.&nbsp;Стоимость&nbsp;доставки&nbsp;и&nbsp;монтажа&nbsp;рассчитывается&nbsp;после&nbsp;оформления&nbsp;заказа</strong></p>",
+      "image": "https://cdn.frents.ru/ameli-rental/ccb63a8f-f836-4318-8e3f-33c88f3804fa_арка_волна_тотал_кокос_раф_цветы.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/zony-tseremonii-fow/20790",
+      "variants": [
+        {
+          "id": 20040,
+          "name": "Зона церемонии на 28 гостей",
+          "title": "Варианты церемоний",
+          "price": 54800,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 20059,
+          "name": "Зона церемонии на 40 гостей без флористики",
+          "title": "Варианты церемоний",
+          "price": 65000,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 23467,
+          "name": "Зона церемонии на 40 гостей без флористики",
+          "title": "Варианты церемоний",
+          "price": 43000,
+          "visible": true,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 5367,
+          "name": "Пуфик \"Фуфик\" мини кокосовый раф бархат",
+          "quantity": 40,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3d8245cb-d0fa-4b3e-a842-26296ddcc8de_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/pufy-fufik-znh-byq-zef-qay-fbe-qwg-knd-oea/5367"
+        },
+        {
+          "id": 19136,
+          "name": "Задник \"Белатрикс\" с драпировкой, кокосовый раф бархат",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/f7478016-229f-4c49-9f01-3a95541fa1b3_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/19136"
+        },
+        {
+          "id": 20039,
+          "name": "Бархат для дорожки 10м",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/b8df41c1-7cf7-4dbd-8cf0-1f281b057ed8_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/20039"
+        },
+        {
+          "id": 20061,
+          "name": "Флористическая композиция к зоне церемонии Белатрикс из декоративных цветов",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/80c2b869-6884-4770-8da9-de09a4693eb6_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/floristicheskie-kompozitsii-tehnicheskaja-kategorija-amh/20061"
+        }
+      ]
+    },
+    {
+      "productId": "demo-ceremony-02",
+      "id": 20040,
+      "name": "Зона церемонии на 28 гостей",
+      "price": 54800,
+      "rentalDays": 3,
+      "description": "<p>Зона&nbsp;церемонии&nbsp;может&nbsp;быть&nbsp;выполнена&nbsp;в&nbsp;любой&nbsp;цветовой&nbsp;гамме.</p><p></p><p>Вы&nbsp;можете&nbsp;изменить&nbsp;количество&nbsp;и&nbsp;тип&nbsp;посадочных&nbsp;мест&nbsp;(ознакомьтесь&nbsp;с&nbsp;ассортиментом&nbsp;пуфов&nbsp;и&nbsp;стульев&nbsp;в&nbsp;нашем&nbsp;каталоге).</p><p></p><p>Зона&nbsp;церемонии&nbsp;представлена&nbsp;без&nbsp;флористики.&nbsp;Флористики&nbsp;вы&nbsp;можете&nbsp;подобрать&nbsp;в&nbsp;разделе&nbsp;&quot;Флористика&nbsp;для&nbsp;зон&nbsp;церемонии&quot;.&nbsp;Флористические&nbsp;композиции&nbsp;мы&nbsp;делаем&nbsp;только&nbsp;при&nbsp;заказе&nbsp;оформления&nbsp;мероприятия&nbsp;под&nbsp;ключ.&nbsp;За&nbsp;подробностями&nbsp;обращайтесь&nbsp;к&nbsp;менеджеру</p><p></p><p><strong>Обратите&nbsp;внимание&nbsp;-&nbsp;стоимость&nbsp;зоны&nbsp;церемонии&nbsp;указана&nbsp;без&nbsp;учета&nbsp;монтажа.&nbsp;Стоимость&nbsp;доставки&nbsp;и&nbsp;монтажа&nbsp;расчитывается&nbsp;после&nbsp;оформления&nbsp;заказа</strong></p>",
+      "image": "https://cdn.frents.ru/ameli-rental/fea89754-9fbd-456b-92cd-8eb3ab2592a6_арка_волна_розовая_фиолет.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/zony-tseremonii-fow/20040",
+      "variants": [
+        {
+          "id": 20790,
+          "name": "Зона церемонии на 40 гостей c флористикой",
+          "title": "Варианты церемоний",
+          "price": 88040,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 20059,
+          "name": "Зона церемонии на 40 гостей без флористики",
+          "title": "Варианты церемоний",
+          "price": 65000,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 23467,
+          "name": "Зона церемонии на 40 гостей без флористики",
+          "title": "Варианты церемоний",
+          "price": 43000,
+          "visible": true,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 10163,
+          "name": "Пуфик \"Фуфик\" мини фиолетовый люпин бархат",
+          "quantity": 28,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/b0fed372-2957-42ec-b33f-52647fabf05b_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/pufy-fufik-znh-byq-zef-qay-fbe-qwg-knd-oea/10163"
+        },
+        {
+          "id": 19134,
+          "name": "Задник \"Белатрикс\" с драпировкой, бледно-розовый бархат",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/d389c6d7-d565-4d04-b68b-cf261cbac624_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/19134"
+        },
+        {
+          "id": 20039,
+          "name": "Бархат для дорожки 10м",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/b8df41c1-7cf7-4dbd-8cf0-1f281b057ed8_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/20039"
+        }
+      ]
+    },
+    {
+      "productId": "demo-ceremony-02",
+      "id": 20059,
+      "name": "Зона церемонии на 40 гостей без флористики",
+      "price": 65000,
+      "rentalDays": 3,
+      "description": "<p>Зона&nbsp;церемонии&nbsp;может&nbsp;быть&nbsp;выполнена&nbsp;в&nbsp;любой&nbsp;цветовой&nbsp;гамме.</p><p></p><p>Вы&nbsp;можете&nbsp;изменить&nbsp;количество&nbsp;и&nbsp;тип&nbsp;посадочных&nbsp;мест&nbsp;(ознакомьтесь&nbsp;с&nbsp;ассортиментом&nbsp;пуфов&nbsp;и&nbsp;стульев&nbsp;в&nbsp;нашем&nbsp;каталоге).</p><p></p><p>Зона&nbsp;церемонии&nbsp;представлена&nbsp;без&nbsp;флористики.&nbsp;Флористики&nbsp;вы&nbsp;можете&nbsp;подобрать&nbsp;в&nbsp;разделе&nbsp;&quot;Флористика&nbsp;для&nbsp;зон&nbsp;церемонии&quot;.&nbsp;Флористические&nbsp;композиции&nbsp;мы&nbsp;делаем&nbsp;только&nbsp;при&nbsp;заказе&nbsp;оформления&nbsp;мероприятия&nbsp;под&nbsp;ключ.&nbsp;За&nbsp;подробностями&nbsp;обращайтесь&nbsp;к&nbsp;менеджеру</p><p></p><p><strong>Обратите&nbsp;внимание&nbsp;-&nbsp;стоимость&nbsp;зоны&nbsp;церемонии&nbsp;указана&nbsp;без&nbsp;учета&nbsp;монтажа.&nbsp;Стоимость&nbsp;доставки&nbsp;и&nbsp;монтажа&nbsp;расчитывается&nbsp;после&nbsp;оформления&nbsp;заказа</strong></p>",
+      "image": "https://cdn.frents.ru/ameli-rental/7bb41373-701b-4942-bc07-e3a693775861_арка_волна_тотал_жемчуг.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/zony-tseremonii-fow/20059",
+      "variants": [
+        {
+          "id": 20790,
+          "name": "Зона церемонии на 40 гостей c флористикой",
+          "title": "Варианты церемоний",
+          "price": 88040,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 20040,
+          "name": "Зона церемонии на 28 гостей",
+          "title": "Варианты церемоний",
+          "price": 54800,
+          "visible": true,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 9971,
+          "name": "Пуфик \"Фуфик\" мини жемчужный бархат",
+          "quantity": 40,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/0bde30bb-55f3-4bc8-82e7-ece084ea07aa_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/pufy-fufik-znh-byq-zef-qay-fbe-qwg-knd-oea/9971"
+        },
+        {
+          "id": 19133,
+          "name": "Задник \"Белатрикс\" с драпировкой, жемчужный бархат",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/be4470cf-5df1-4ff4-a5c1-e359184bdc3d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/19133"
+        },
+        {
+          "id": 20039,
+          "name": "Бархат для дорожки 10м",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/b8df41c1-7cf7-4dbd-8cf0-1f281b057ed8_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/20039"
+        }
+      ]
+    },
+    {
+      "productId": "demo-ceremony-02",
+      "id": 23467,
+      "name": "Зона церемонии на 40 гостей без флористики",
+      "price": 43000,
+      "rentalDays": 3,
+      "description": "<p>Зона&nbsp;церемонии&nbsp;может&nbsp;быть&nbsp;выполнена&nbsp;в&nbsp;любой&nbsp;цветовой&nbsp;гамме.</p><p></p><p>На&nbsp;скамейках&nbsp;с&nbsp;комфортом&nbsp;рассаживается&nbsp;3-4&nbsp;гостя.</p><p></p><p>Вы&nbsp;можете&nbsp;изменить&nbsp;количество&nbsp;и&nbsp;тип&nbsp;посадочных&nbsp;мест&nbsp;(ознакомьтесь&nbsp;с&nbsp;ассортиментом&nbsp;пуфов&nbsp;и&nbsp;стульев&nbsp;в&nbsp;нашем&nbsp;каталоге).</p><p></p><p>Зона&nbsp;церемонии&nbsp;представлена&nbsp;без&nbsp;флористики.&nbsp;Флористики&nbsp;вы&nbsp;можете&nbsp;подобрать&nbsp;в&nbsp;разделе&nbsp;&quot;Флористика&nbsp;для&nbsp;зон&nbsp;церемонии&quot;.&nbsp;Флористические&nbsp;композиции&nbsp;мы&nbsp;делаем&nbsp;только&nbsp;при&nbsp;заказе&nbsp;оформления&nbsp;мероприятия&nbsp;под&nbsp;ключ.&nbsp;За&nbsp;подробностями&nbsp;обращайтесь&nbsp;к&nbsp;менеджеру</p><p></p><p><strong>Обратите&nbsp;внимание&nbsp;-&nbsp;стоимость&nbsp;зоны&nbsp;церемонии&nbsp;указана&nbsp;без&nbsp;учета&nbsp;монтажа.&nbsp;Стоимость&nbsp;доставки&nbsp;и&nbsp;монтажа&nbsp;расчитывается&nbsp;после&nbsp;оформления&nbsp;заказа</strong></p>",
+      "image": "https://cdn.frents.ru/ameli-rental/082ee9f2-f4b5-46cc-8728-6ba9f5f44f96_арка_волна_с_лавками_мал.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/zony-tseremonii-fow/23467",
+      "variants": [
+        {
+          "id": 20040,
+          "name": "Зона церемонии на 28 гостей",
+          "title": "Варианты церемоний",
+          "price": 54800,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 20790,
+          "name": "Зона церемонии на 40 гостей c флористикой",
+          "title": "Варианты церемоний",
+          "price": 88040,
+          "visible": true,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 12197,
+          "name": "Скамейка складная \"Флэт\"  кокосовый раф бархат",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/9153441d-5d9a-4afd-9812-666163393fc9_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/skamejki-pxt/12197"
+        },
+        {
+          "id": 19133,
+          "name": "Задник \"Белатрикс\" с драпировкой, жемчужный бархат",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/be4470cf-5df1-4ff4-a5c1-e359184bdc3d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/19133"
+        },
+        {
+          "id": 20039,
+          "name": "Бархат для дорожки 10м",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/b8df41c1-7cf7-4dbd-8cf0-1f281b057ed8_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/arki-s-drapirovkoj-xfx/20039"
+        }
+      ]
+    },
+    {
+      "productId": "demo-setting-01",
+      "demoId": "demo-setting-01",
+      "slug": "sety-sss",
+      "id": 6263,
+      "name": "Сет \"Тайлер\"",
+      "price": 1380,
+      "rentalDays": 3,
+      "description": "Ложка не входит в сет, вы можете добавить ее отдельно",
+      "image": "https://cdn.frents.ru/ameli-rental/3c3a3cc8-cee2-4a6b-b7c3-ac93331e1b1f_temp_image.jpg",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/sety-sss/6263",
+      "variants": [],
+      "composition": [
+        {
+          "id": 2826,
+          "name": "Нож десертный \"Сафо\" золотой",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/68231b70-f896-49be-abe4-a62da576cda9_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2826"
+        },
+        {
+          "id": 2828,
+          "name": "Нож столовый \"Сафо\" золотой",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/af461429-e1c5-4f46-88c4-3257a97df9b1_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2828"
+        },
+        {
+          "id": 2830,
+          "name": "Вилка десертная \"Сафо\" золотая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/01b98c8b-efb9-4bd6-87f5-ffd8f25c95af_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2830"
+        },
+        {
+          "id": 2832,
+          "name": "Вилка столовая \"Сафо\" золотая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/842f7659-72c2-496b-9db7-d7a94c64568d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2832"
+        },
+        {
+          "id": 3034,
+          "name": "Стакан \"Роулинг\"  светло-голубой",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/89080dea-4aac-4c97-bb2d-90d074e1e691_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3034"
+        },
+        {
+          "id": 3036,
+          "name": "Бокал \"Роулинг\"  светло-голубой под шампанское",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/f2ad0a0d-09b0-440a-9462-8d5b7760b868_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3036"
+        },
+        {
+          "id": 3037,
+          "name": "Бокал \"Роулинг\"  светло-голубой винный",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/47331b4d-ed44-4f31-827b-735f8c7eb2f4_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3037"
+        },
+        {
+          "id": 3516,
+          "name": "Кольцо для салфетки \"Гюго\"",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/6dded0d8-0a30-418b-a938-0b983bb74fa7_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/koltsa-dlja-salfetok-fnm-nhx/3516"
+        },
+        {
+          "id": 3632,
+          "name": "Салфетка бархатная \"Бета\" голубой сапфир",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/163757e7-19da-4f81-b9a5-6d01fb373295_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/3632"
+        },
+        {
+          "id": 4166,
+          "name": "Тарелка \"Вульф\" белая большая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/adccce80-4279-4289-9c9d-ef1c63db7bff_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/4166"
+        },
+        {
+          "id": 4170,
+          "name": "Тарелка \"Вульф\" белая малая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/680cd413-1cd5-4587-bbc8-06d70085e542_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/4170"
+        }
+      ]
+    },
+    {
+      "productId": "demo-table-02",
+      "demoId": "demo-table-02",
+      "slug": "gostevye-stoly-zmejki-jjv",
+      "id": 20992,
+      "name": "Сет \"Изысканный жемчуг\" на 10 персон Базовый",
+      "price": 24650,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/475e0c18-2c39-4e67-864d-dc397f14f40c_изысканныи_жемчуг.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/20992",
+      "variants": [
+        {
+          "id": 20993,
+          "name": "Сет \"Изысканный жемчуг\" на 10 персон Оптимальный",
+          "title": "Варианты",
+          "price": 27950,
+          "visible": false,
+          "alternative": true
+        },
+        {
+          "id": 20994,
+          "name": "Сет \"Изысканный жемчуг\" на 10 персон Премиум",
+          "title": "Варианты",
+          "price": 33800,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 5803,
+          "name": "Салфетка бархатная \"Бета\" жемчужная",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/49ca1755-137a-48e8-b93a-e780f2c859ae_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5803"
+        },
+        {
+          "id": 6145,
+          "name": "Стул \"Вашингтон\" золотой, жемчужный бархат",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/75864664-8bf2-49f1-84e1-4eeac2b11439_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6145"
+        },
+        {
+          "id": 6548,
+          "name": "Скатерть бархатная \"Бета+\" жемчужная прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/b628ef14-20c4-4591-b01b-ac93fd4c346f_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/6548"
+        }
+      ]
+    },
+    {
+      "productId": "demo-table-02",
+      "id": 20993,
+      "name": "Сет \"Изысканный жемчуг\" на 10 персон Оптимальный",
+      "price": 27950,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/475e0c18-2c39-4e67-864d-dc397f14f40c_изысканныи_жемчуг.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/20993",
+      "variants": [
+        {
+          "id": 20992,
+          "name": "Сет \"Изысканный жемчуг\" на 10 персон Базовый",
+          "title": "Варианты",
+          "price": 24650,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 20994,
+          "name": "Сет \"Изысканный жемчуг\" на 10 персон Премиум",
+          "title": "Варианты",
+          "price": 33800,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 3098,
+          "name": "Бокал \"Лавлейс\" прозрачный винный",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/ad357c03-5991-4f12-abb1-489e7527f382_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3098"
+        },
+        {
+          "id": 5803,
+          "name": "Салфетка бархатная \"Бета\" жемчужная",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/49ca1755-137a-48e8-b93a-e780f2c859ae_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5803"
+        },
+        {
+          "id": 6145,
+          "name": "Стул \"Вашингтон\" золотой, жемчужный бархат",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/75864664-8bf2-49f1-84e1-4eeac2b11439_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6145"
+        },
+        {
+          "id": 6548,
+          "name": "Скатерть бархатная \"Бета+\" жемчужная прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/b628ef14-20c4-4591-b01b-ac93fd4c346f_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/6548"
+        },
+        {
+          "id": 11206,
+          "name": "Тарелка \"Кюри\" белая большая",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/bc7551e8-3c1f-41c0-ad2a-0cf20b7ee019_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/11206"
+        }
+      ]
+    },
+    {
+      "productId": "demo-table-02",
+      "id": 20994,
+      "name": "Сет \"Изысканный жемчуг\" на 10 персон Премиум",
+      "price": 33800,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/475e0c18-2c39-4e67-864d-dc397f14f40c_изысканныи_жемчуг.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/20994",
+      "variants": [
+        {
+          "id": 20992,
+          "name": "Сет \"Изысканный жемчуг\" на 10 персон Базовый",
+          "title": "Варианты",
+          "price": 24650,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 20993,
+          "name": "Сет \"Изысканный жемчуг\" на 10 персон Оптимальный",
+          "title": "Варианты",
+          "price": 27950,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 2923,
+          "name": "Набор приборов \"Сафо\" золотых 2 шт",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/050533a9-423c-4f05-8430-b64cd3155b28_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2923"
+        },
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 3093,
+          "name": "Стакан \"Лавлейс\" прозрачный",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/4f4f2504-3edc-41f5-a64a-f07078ea148b_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3093"
+        },
+        {
+          "id": 3096,
+          "name": "Бокал \"Лавлейс\" прозрачный под шампанское",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/42601864-92db-44e5-9c47-ff8c11dc5723_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3096"
+        },
+        {
+          "id": 3098,
+          "name": "Бокал \"Лавлейс\" прозрачный винный",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/ad357c03-5991-4f12-abb1-489e7527f382_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3098"
+        },
+        {
+          "id": 5803,
+          "name": "Салфетка бархатная \"Бета\" жемчужная",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/49ca1755-137a-48e8-b93a-e780f2c859ae_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5803"
+        },
+        {
+          "id": 6145,
+          "name": "Стул \"Вашингтон\" золотой, жемчужный бархат",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/75864664-8bf2-49f1-84e1-4eeac2b11439_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6145"
+        },
+        {
+          "id": 6548,
+          "name": "Скатерть бархатная \"Бета+\" жемчужная прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/b628ef14-20c4-4591-b01b-ac93fd4c346f_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/6548"
+        },
+        {
+          "id": 11205,
+          "name": "Тарелка \"Кюри\" белая малая ",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/5b0c8d83-4fad-4597-8f80-b4448af1fd69_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/11205"
+        },
+        {
+          "id": 11206,
+          "name": "Тарелка \"Кюри\" белая большая",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/bc7551e8-3c1f-41c0-ad2a-0cf20b7ee019_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/11206"
+        }
+      ]
+    },
+    {
+      "productId": "demo-flowers-01",
+      "demoId": "demo-flowers-01",
+      "slug": "kompozitsii-na-stoly-ivp",
+      "id": 20051,
+      "name": "Флористическая композиция Хапи белая",
+      "price": 11350,
+      "rentalDays": 3,
+      "description": "<p>Флористическая&nbsp;композиция&nbsp;на&nbsp;низкой&nbsp;подставке&nbsp;из&nbsp;сезонных&nbsp;цветов.&nbsp;Может&nbsp;быть&nbsp;выполнена&nbsp;в&nbsp;цветовой&nbsp;гамме&nbsp;на&nbsp;выбор.</p><p></p><p>Подставка&nbsp;может&nbsp;быть&nbsp;золотого,&nbsp;серебряного,&nbsp;белого&nbsp;или&nbsp;черного&nbsp;цвета.</p><p></p><p>Обращаем&nbsp;ваше&nbsp;внимание,&nbsp;что&nbsp;флористическую&nbsp;композицию&nbsp;можно&nbsp;заказать&nbsp;только&nbsp;при&nbsp;комплексном&nbsp;оформлении&nbsp;мероприятия.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/d4158639-bb1f-459b-8f30-f38f05a22b78_хапи_бел.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/kompozitsii-na-stoly-ivp/20051",
+      "variants": [],
+      "composition": []
+    },
+    {
+      "productId": "demo-18319",
+      "demoId": "demo-18319",
+      "slug": "gostevye-stoly-zmejki-jjv",
+      "id": 18319,
+      "name": "Сет \"Тихий сад\" на 10 персон Базовый",
+      "price": 23814,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/4f0e7e3c-bf46-4414-bd4a-ac56557f7a95_тихии_сад.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/18319",
+      "variants": [
+        {
+          "id": 18320,
+          "name": "Сет \"Тихий сад\" на 10 персон Оптимальный",
+          "title": "Варианты сетов",
+          "price": 27214,
+          "visible": false,
+          "alternative": true
+        },
+        {
+          "id": 18321,
+          "name": "Сет \"Тихий сад\" на 10 персон Премиум",
+          "title": "Варианты сетов",
+          "price": 32114,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 3061,
+          "name": "Скатерть канвас \"Гамма+\" пшеничная прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/866e5a01-8407-4087-a5f8-7681eee30680_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/3061"
+        },
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 5812,
+          "name": "Салфетка бархатная \"Бета\" зеленый чай",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/5073be07-0f12-4337-9a5a-7ff229f7be0a_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5812"
+        },
+        {
+          "id": 6828,
+          "name": "Стул \"Вашингтон\" серебряный, зеленый чай бархат",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/4b4d224c-ddec-48f3-a6a6-eb709aa4cd0d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6828"
+        }
+      ]
+    },
+    {
+      "productId": "demo-18319",
+      "id": 18320,
+      "name": "Сет \"Тихий сад\" на 10 персон Оптимальный",
+      "price": 27214,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/4f0e7e3c-bf46-4414-bd4a-ac56557f7a95_тихии_сад.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/18320",
+      "variants": [
+        {
+          "id": 18319,
+          "name": "Сет \"Тихий сад\" на 10 персон Базовый",
+          "title": "Варианты сетов",
+          "price": 23814,
+          "visible": true,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 2845,
+          "name": "Бокал \"Роулинг\"  зеленый винный",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/7ae827bb-8e5d-4d90-98af-99bd6de14728_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2845"
+        },
+        {
+          "id": 3061,
+          "name": "Скатерть канвас \"Гамма+\" пшеничная прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/866e5a01-8407-4087-a5f8-7681eee30680_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/3061"
+        },
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 4780,
+          "name": "Тарелка \"Барто\" прозрачная с черным кантом",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/cf0521f6-160c-4d9d-92a1-e7d649a9f3eb_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/4780"
+        },
+        {
+          "id": 5812,
+          "name": "Салфетка бархатная \"Бета\" зеленый чай",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/5073be07-0f12-4337-9a5a-7ff229f7be0a_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5812"
+        },
+        {
+          "id": 6828,
+          "name": "Стул \"Вашингтон\" серебряный, зеленый чай бархат",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/4b4d224c-ddec-48f3-a6a6-eb709aa4cd0d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6828"
+        }
+      ]
+    },
+    {
+      "productId": "demo-18319",
+      "id": 18321,
+      "name": "Сет \"Тихий сад\" на 10 персон Премиум",
+      "price": 32114,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/4f0e7e3c-bf46-4414-bd4a-ac56557f7a95_тихии_сад.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/18321",
+      "variants": [
+        {
+          "id": 18319,
+          "name": "Сет \"Тихий сад\" на 10 персон Базовый",
+          "title": "Варианты сетов",
+          "price": 23814,
+          "visible": true,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 2850,
+          "name": "Набор бокалов \"Роулинг\" зеленых",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/0008d8a8-6b34-4fc8-8bfd-b037d8bee98d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2850"
+        },
+        {
+          "id": 2968,
+          "name": "Набор приборов \"Сафо\" черных 2 шт",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/2d5a7b08-debd-4fbc-86ba-009e938a8502_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2968"
+        },
+        {
+          "id": 3061,
+          "name": "Скатерть канвас \"Гамма+\" пшеничная прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/866e5a01-8407-4087-a5f8-7681eee30680_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/3061"
+        },
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 4780,
+          "name": "Тарелка \"Барто\" прозрачная с черным кантом",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/cf0521f6-160c-4d9d-92a1-e7d649a9f3eb_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/4780"
+        },
+        {
+          "id": 5812,
+          "name": "Салфетка бархатная \"Бета\" зеленый чай",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/5073be07-0f12-4337-9a5a-7ff229f7be0a_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5812"
+        },
+        {
+          "id": 6828,
+          "name": "Стул \"Вашингтон\" серебряный, зеленый чай бархат",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/4b4d224c-ddec-48f3-a6a6-eb709aa4cd0d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6828"
+        }
+      ]
+    },
+    {
+      "productId": "demo-23528",
+      "demoId": "demo-23528",
+      "slug": "gostevye-stoly-zmejki-jjv",
+      "id": 23528,
+      "name": "Сет \"Мария Антуанетта\" на 10 персон Базовый",
+      "price": 24450,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/952ddea8-7557-42d9-b2c1-1441e7498ff2_022_мария_антуанетта.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/23528",
+      "variants": [
+        {
+          "id": 23529,
+          "name": "Сет \"Мария Антуанетта\" на 10 персон Оптимальный",
+          "title": "Варианты сетов",
+          "price": 28950,
+          "visible": false,
+          "alternative": true
+        },
+        {
+          "id": 23530,
+          "name": "Сет \"Мария Антуанетта\" на 10 персон Премиум",
+          "title": "Варианты сетов",
+          "price": 33600,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 4117,
+          "name": "Скатерть \"Шелк+\" кремовая прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/fa02deb8-ff61-49a6-8f35-e1cb31f92003_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/4117"
+        },
+        {
+          "id": 6796,
+          "name": "Стул \"Вашингтон\" золотой, аквамарин бархат",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/a057738f-cb82-43c8-a812-d9bedb6b9cf3_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6796"
+        },
+        {
+          "id": 11692,
+          "name": "Салфетка \"Каппа\" Диор синяя",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/315f1f3f-c0e3-4181-a2d3-3e02393339cb_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/11692"
+        }
+      ]
+    },
+    {
+      "productId": "demo-23528",
+      "id": 23529,
+      "name": "Сет \"Мария Антуанетта\" на 10 персон Оптимальный",
+      "price": 28950,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/952ddea8-7557-42d9-b2c1-1441e7498ff2_022_мария_антуанетта.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/23529",
+      "variants": [
+        {
+          "id": 23528,
+          "name": "Сет \"Мария Антуанетта\" на 10 персон Базовый",
+          "title": "Варианты сетов",
+          "price": 24450,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 23530,
+          "name": "Сет \"Мария Антуанетта\" на 10 персон Премиум",
+          "title": "Варианты сетов",
+          "price": 33600,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 2862,
+          "name": "Бокал \"Санд\" с золотым кантом винный",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/439d4741-8b29-459a-b806-c8a2d1f08b14_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2862"
+        },
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 4117,
+          "name": "Скатерть \"Шелк+\" кремовая прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/fa02deb8-ff61-49a6-8f35-e1cb31f92003_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/4117"
+        },
+        {
+          "id": 6796,
+          "name": "Стул \"Вашингтон\" золотой, аквамарин бархат",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/a057738f-cb82-43c8-a812-d9bedb6b9cf3_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6796"
+        },
+        {
+          "id": 11207,
+          "name": "Набор тарелок \"Кюри\" белых",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/1adb98e2-44d2-416a-a95a-d6a2461aa3da_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/11207"
+        },
+        {
+          "id": 11692,
+          "name": "Салфетка \"Каппа\" Диор синяя",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/315f1f3f-c0e3-4181-a2d3-3e02393339cb_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/11692"
+        }
+      ]
+    },
+    {
+      "productId": "demo-23528",
+      "id": 23530,
+      "name": "Сет \"Мария Антуанетта\" на 10 персон Премиум",
+      "price": 33600,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/952ddea8-7557-42d9-b2c1-1441e7498ff2_022_мария_антуанетта.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/23530",
+      "variants": [
+        {
+          "id": 23528,
+          "name": "Сет \"Мария Антуанетта\" на 10 персон Базовый",
+          "title": "Варианты сетов",
+          "price": 24450,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 23529,
+          "name": "Сет \"Мария Антуанетта\" на 10 персон Оптимальный",
+          "title": "Варианты сетов",
+          "price": 28950,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 2864,
+          "name": "Набор бокалов \"Санд\" с золотым кантом",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/6f2bb2cb-2125-43fb-bfcc-148e93ac1584_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2864"
+        },
+        {
+          "id": 2923,
+          "name": "Набор приборов \"Сафо\" золотых 2 шт",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/050533a9-423c-4f05-8430-b64cd3155b28_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2923"
+        },
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 4117,
+          "name": "Скатерть \"Шелк+\" кремовая прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/fa02deb8-ff61-49a6-8f35-e1cb31f92003_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/4117"
+        },
+        {
+          "id": 6796,
+          "name": "Стул \"Вашингтон\" золотой, аквамарин бархат",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/a057738f-cb82-43c8-a812-d9bedb6b9cf3_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6796"
+        },
+        {
+          "id": 11207,
+          "name": "Набор тарелок \"Кюри\" белых",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/1adb98e2-44d2-416a-a95a-d6a2461aa3da_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/11207"
+        },
+        {
+          "id": 11692,
+          "name": "Салфетка \"Каппа\" Диор синяя",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/315f1f3f-c0e3-4181-a2d3-3e02393339cb_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/11692"
+        }
+      ]
+    },
+    {
+      "productId": "demo-23519",
+      "demoId": "demo-23519",
+      "slug": "gostevye-stoly-zmejki-jjv",
+      "id": 23519,
+      "name": "Сет \"Розовый пломбир\" на 10 персон Базовый",
+      "price": 18400,
+      "rentalDays": 2,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/4380edc4-c0f9-468a-815f-fd0c130df229_019_розовыи_пломбир.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/23519",
+      "variants": [
+        {
+          "id": 23520,
+          "name": "Сет \"Розовый пломбир\" на 10 персон Оптимальный",
+          "title": "Варианты сетов",
+          "price": 21500,
+          "visible": false,
+          "alternative": true
+        },
+        {
+          "id": 23521,
+          "name": "Сет \"Розовый пломбир\" на 10 персон Премиум",
+          "title": "Варианты сетов",
+          "price": 26000,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 5689,
+          "name": "Салфетка \"Альфа\" пломбир",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/55ce4536-8eb5-4654-af16-f561ef1d955c_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5689"
+        },
+        {
+          "id": 5772,
+          "name": "Скатерть бархатная \"Бета+\" бледно-розовая прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/e9f803b8-9989-4e3b-a3b9-b2fb2325d5a9_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/5772"
+        },
+        {
+          "id": 6788,
+          "name": "Стул \"Гост\" прозрачный",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/a680b0e9-60e3-4f7c-a1f0-3aceab012e51_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-swe-aoa-dld-qkt-ddo/6788"
+        }
+      ]
+    },
+    {
+      "productId": "demo-23519",
+      "id": 23520,
+      "name": "Сет \"Розовый пломбир\" на 10 персон Оптимальный",
+      "price": 21500,
+      "rentalDays": 2,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/4380edc4-c0f9-468a-815f-fd0c130df229_019_розовыи_пломбир.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/23520",
+      "variants": [
+        {
+          "id": 23519,
+          "name": "Сет \"Розовый пломбир\" на 10 персон Базовый",
+          "title": "Варианты сетов",
+          "price": 18400,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 23521,
+          "name": "Сет \"Розовый пломбир\" на 10 персон Премиум",
+          "title": "Варианты сетов",
+          "price": 26000,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 2893,
+          "name": "Бокал \"Шелли\" с золотым кантом винный",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/1318a7b3-5745-4eef-b034-4f801e3baebb_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2893"
+        },
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 5689,
+          "name": "Салфетка \"Альфа\" пломбир",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/55ce4536-8eb5-4654-af16-f561ef1d955c_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5689"
+        },
+        {
+          "id": 5772,
+          "name": "Скатерть бархатная \"Бета+\" бледно-розовая прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/e9f803b8-9989-4e3b-a3b9-b2fb2325d5a9_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/5772"
+        },
+        {
+          "id": 5824,
+          "name": "Тарелка \"Барто\"  прозрачная с золотым кантом",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/d4d54175-95b9-464e-9800-c6544ba697e0_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/5824"
+        },
+        {
+          "id": 6788,
+          "name": "Стул \"Гост\" прозрачный",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/a680b0e9-60e3-4f7c-a1f0-3aceab012e51_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-swe-aoa-dld-qkt-ddo/6788"
+        }
+      ]
+    },
+    {
+      "productId": "demo-23519",
+      "id": 23521,
+      "name": "Сет \"Розовый пломбир\" на 10 персон Премиум",
+      "price": 26000,
+      "rentalDays": 2,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/4380edc4-c0f9-468a-815f-fd0c130df229_019_розовыи_пломбир.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/gostevye-stoly-zmejki-jjv/23521",
+      "variants": [
+        {
+          "id": 23519,
+          "name": "Сет \"Розовый пломбир\" на 10 персон Базовый",
+          "title": "Варианты сетов",
+          "price": 18400,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 23520,
+          "name": "Сет \"Розовый пломбир\" на 10 персон Оптимальный",
+          "title": "Варианты сетов",
+          "price": 21500,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 2899,
+          "name": "Набор бокалов \"Шелли\"",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/e2b072c1-e20c-43e0-a3a7-d533f5c8443f_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2899"
+        },
+        {
+          "id": 2923,
+          "name": "Набор приборов \"Сафо\" золотых 2 шт",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/050533a9-423c-4f05-8430-b64cd3155b28_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2923"
+        },
+        {
+          "id": 3065,
+          "name": "Банкетный стол \"Вольф\" змейка 2 части белый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/3a1a4907-1aa2-4caf-b015-e7d1dada9d36_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/banketnye-stoly-vfa-zoq-mlk-swm/3065"
+        },
+        {
+          "id": 5689,
+          "name": "Салфетка \"Альфа\" пломбир",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/55ce4536-8eb5-4654-af16-f561ef1d955c_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5689"
+        },
+        {
+          "id": 5772,
+          "name": "Скатерть бархатная \"Бета+\" бледно-розовая прямоугольная",
+          "quantity": 2,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/e9f803b8-9989-4e3b-a3b9-b2fb2325d5a9_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/5772"
+        },
+        {
+          "id": 5824,
+          "name": "Тарелка \"Барто\"  прозрачная с золотым кантом",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/d4d54175-95b9-464e-9800-c6544ba697e0_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/5824"
+        },
+        {
+          "id": 6788,
+          "name": "Стул \"Гост\" прозрачный",
+          "quantity": 10,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/a680b0e9-60e3-4f7c-a1f0-3aceab012e51_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-swe-aoa-dld-qkt-ddo/6788"
+        }
+      ]
+    },
+    {
+      "productId": "demo-20989",
+      "demoId": "demo-20989",
+      "slug": "prjamougolnye-gostevye-stoly-qdl",
+      "id": 20989,
+      "name": "Сет \"Изысканный жемчуг\" на 6 персон Базовый",
+      "price": 11260,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/aa661408-c60c-4ec0-939e-a6e35fb6b788_изысканныи_жемчуг.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-gostevye-stoly-qdl/20989",
+      "variants": [
+        {
+          "id": 20990,
+          "name": "Сет \"Изысканный жемчуг\" на 6 персон Оптимальный",
+          "title": "Варианты",
+          "price": 13240,
+          "visible": false,
+          "alternative": true
+        },
+        {
+          "id": 20991,
+          "name": "Сет \"Изысканный жемчуг\" на 6 персон Премиум",
+          "title": "Варианты",
+          "price": 15950,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 5803,
+          "name": "Салфетка бархатная \"Бета\" жемчужная",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/49ca1755-137a-48e8-b93a-e780f2c859ae_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5803"
+        },
+        {
+          "id": 6145,
+          "name": "Стул \"Вашингтон\" золотой, жемчужный бархат",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/75864664-8bf2-49f1-84e1-4eeac2b11439_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6145"
+        },
+        {
+          "id": 6548,
+          "name": "Скатерть бархатная \"Бета+\" жемчужная прямоугольная",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/b628ef14-20c4-4591-b01b-ac93fd4c346f_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/6548"
+        }
+      ]
+    },
+    {
+      "productId": "demo-20989",
+      "id": 20990,
+      "name": "Сет \"Изысканный жемчуг\" на 6 персон Оптимальный",
+      "price": 13240,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/aa661408-c60c-4ec0-939e-a6e35fb6b788_изысканныи_жемчуг.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-gostevye-stoly-qdl/20990",
+      "variants": [
+        {
+          "id": 20989,
+          "name": "Сет \"Изысканный жемчуг\" на 6 персон Базовый",
+          "title": "Варианты",
+          "price": 11260,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 20991,
+          "name": "Сет \"Изысканный жемчуг\" на 6 персон Премиум",
+          "title": "Варианты",
+          "price": 15950,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 3098,
+          "name": "Бокал \"Лавлейс\" прозрачный винный",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/ad357c03-5991-4f12-abb1-489e7527f382_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3098"
+        },
+        {
+          "id": 5803,
+          "name": "Салфетка бархатная \"Бета\" жемчужная",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/49ca1755-137a-48e8-b93a-e780f2c859ae_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5803"
+        },
+        {
+          "id": 6145,
+          "name": "Стул \"Вашингтон\" золотой, жемчужный бархат",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/75864664-8bf2-49f1-84e1-4eeac2b11439_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6145"
+        },
+        {
+          "id": 6548,
+          "name": "Скатерть бархатная \"Бета+\" жемчужная прямоугольная",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/b628ef14-20c4-4591-b01b-ac93fd4c346f_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/6548"
+        },
+        {
+          "id": 11206,
+          "name": "Тарелка \"Кюри\" белая большая",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/bc7551e8-3c1f-41c0-ad2a-0cf20b7ee019_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/11206"
+        }
+      ]
+    },
+    {
+      "productId": "demo-20989",
+      "id": 20991,
+      "name": "Сет \"Изысканный жемчуг\" на 6 персон Премиум",
+      "price": 15950,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/aa661408-c60c-4ec0-939e-a6e35fb6b788_изысканныи_жемчуг.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-gostevye-stoly-qdl/20991",
+      "variants": [
+        {
+          "id": 20989,
+          "name": "Сет \"Изысканный жемчуг\" на 6 персон Базовый",
+          "title": "Варианты",
+          "price": 11260,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 20990,
+          "name": "Сет \"Изысканный жемчуг\" на 6 персон Оптимальный",
+          "title": "Варианты",
+          "price": 13240,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 2923,
+          "name": "Набор приборов \"Сафо\" золотых 2 шт",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/050533a9-423c-4f05-8430-b64cd3155b28_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2923"
+        },
+        {
+          "id": 3093,
+          "name": "Стакан \"Лавлейс\" прозрачный",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/4f4f2504-3edc-41f5-a64a-f07078ea148b_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3093"
+        },
+        {
+          "id": 3096,
+          "name": "Бокал \"Лавлейс\" прозрачный под шампанское",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/42601864-92db-44e5-9c47-ff8c11dc5723_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3096"
+        },
+        {
+          "id": 3098,
+          "name": "Бокал \"Лавлейс\" прозрачный винный",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/ad357c03-5991-4f12-abb1-489e7527f382_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3098"
+        },
+        {
+          "id": 5803,
+          "name": "Салфетка бархатная \"Бета\" жемчужная",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/49ca1755-137a-48e8-b93a-e780f2c859ae_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5803"
+        },
+        {
+          "id": 6145,
+          "name": "Стул \"Вашингтон\" золотой, жемчужный бархат",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/75864664-8bf2-49f1-84e1-4eeac2b11439_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6145"
+        },
+        {
+          "id": 6548,
+          "name": "Скатерть бархатная \"Бета+\" жемчужная прямоугольная",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/b628ef14-20c4-4591-b01b-ac93fd4c346f_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/6548"
+        },
+        {
+          "id": 11205,
+          "name": "Тарелка \"Кюри\" белая малая ",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/5b0c8d83-4fad-4597-8f80-b4448af1fd69_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/11205"
+        },
+        {
+          "id": 11206,
+          "name": "Тарелка \"Кюри\" белая большая",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/bc7551e8-3c1f-41c0-ad2a-0cf20b7ee019_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/11206"
+        }
+      ]
+    },
+    {
+      "productId": "demo-18316",
+      "demoId": "demo-18316",
+      "slug": "prjamougolnye-gostevye-stoly-qdl",
+      "id": 18316,
+      "name": "Сет \"Тихий сад\" на 6 персон Базовый",
+      "price": 10842,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/a7b73211-0529-46fd-966c-85c28460e9b8_тихии_сад.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-gostevye-stoly-qdl/18316",
+      "variants": [
+        {
+          "id": 18317,
+          "name": "Сет \"Тихий сад\" на 6 персон Оптимальный",
+          "title": "Варианты сетов",
+          "price": 12882,
+          "visible": false,
+          "alternative": true
+        },
+        {
+          "id": 18318,
+          "name": "Сет \"Тихий сад\" на 6 персон Премиум",
+          "title": "Варианты сетов",
+          "price": 15822,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 3061,
+          "name": "Скатерть канвас \"Гамма+\" пшеничная прямоугольная",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/866e5a01-8407-4087-a5f8-7681eee30680_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/3061"
+        },
+        {
+          "id": 5812,
+          "name": "Салфетка бархатная \"Бета\" зеленый чай",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/5073be07-0f12-4337-9a5a-7ff229f7be0a_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5812"
+        },
+        {
+          "id": 6828,
+          "name": "Стул \"Вашингтон\" серебряный, зеленый чай бархат",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/4b4d224c-ddec-48f3-a6a6-eb709aa4cd0d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6828"
+        }
+      ]
+    },
+    {
+      "productId": "demo-18316",
+      "id": 18317,
+      "name": "Сет \"Тихий сад\" на 6 персон Оптимальный",
+      "price": 12882,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/a7b73211-0529-46fd-966c-85c28460e9b8_тихии_сад.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-gostevye-stoly-qdl/18317",
+      "variants": [
+        {
+          "id": 18316,
+          "name": "Сет \"Тихий сад\" на 6 персон Базовый",
+          "title": "Варианты сетов",
+          "price": 10842,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 18318,
+          "name": "Сет \"Тихий сад\" на 6 персон Премиум",
+          "title": "Варианты сетов",
+          "price": 15822,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 2845,
+          "name": "Бокал \"Роулинг\"  зеленый винный",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/7ae827bb-8e5d-4d90-98af-99bd6de14728_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2845"
+        },
+        {
+          "id": 3061,
+          "name": "Скатерть канвас \"Гамма+\" пшеничная прямоугольная",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/866e5a01-8407-4087-a5f8-7681eee30680_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/3061"
+        },
+        {
+          "id": 4780,
+          "name": "Тарелка \"Барто\" прозрачная с черным кантом",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/cf0521f6-160c-4d9d-92a1-e7d649a9f3eb_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/4780"
+        },
+        {
+          "id": 5812,
+          "name": "Салфетка бархатная \"Бета\" зеленый чай",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/5073be07-0f12-4337-9a5a-7ff229f7be0a_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5812"
+        },
+        {
+          "id": 6828,
+          "name": "Стул \"Вашингтон\" серебряный, зеленый чай бархат",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/4b4d224c-ddec-48f3-a6a6-eb709aa4cd0d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6828"
+        }
+      ]
+    },
+    {
+      "productId": "demo-18316",
+      "id": 18318,
+      "name": "Сет \"Тихий сад\" на 6 персон Премиум",
+      "price": 15822,
+      "rentalDays": 3,
+      "description": "<p>Изображение&nbsp;демонстрирует&nbsp;<strong>общий&nbsp;стиль&nbsp;оформления&nbsp;стола</strong>&nbsp;и&nbsp;пример&nbsp;возможной&nbsp;сервировки.</p><p>Фактический&nbsp;состав&nbsp;и&nbsp;стоимость&nbsp;зависят&nbsp;от&nbsp;выбранного&nbsp;варианта&nbsp;—&nbsp;<strong>Базовый,&nbsp;Оптимальный&nbsp;или&nbsp;Премиум</strong>.&nbsp;</p><p>Точный&nbsp;набор&nbsp;предметов&nbsp;и&nbsp;итоговая&nbsp;цена&nbsp;указаны&nbsp;в&nbsp;карточке&nbsp;выбранного&nbsp;варианта&nbsp;товара.</p><p></p><p>Обратите&nbsp;внимание,&nbsp;что&nbsp;цвет&nbsp;и&nbsp;фактура&nbsp;изделий&nbsp;на&nbsp;изображении&nbsp;могут&nbsp;незначительно&nbsp;отличаться.&nbsp;</p><p>Для&nbsp;точной&nbsp;информации&nbsp;ориентируйтесь&nbsp;на&nbsp;карточки&nbsp;конкретных&nbsp;товаров.</p>",
+      "image": "https://cdn.frents.ru/ameli-rental/a7b73211-0529-46fd-966c-85c28460e9b8_тихии_сад.png",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-gostevye-stoly-qdl/18318",
+      "variants": [
+        {
+          "id": 18316,
+          "name": "Сет \"Тихий сад\" на 6 персон Базовый",
+          "title": "Варианты сетов",
+          "price": 10842,
+          "visible": true,
+          "alternative": true
+        },
+        {
+          "id": 18317,
+          "name": "Сет \"Тихий сад\" на 6 персон Оптимальный",
+          "title": "Варианты сетов",
+          "price": 12882,
+          "visible": false,
+          "alternative": true
+        }
+      ],
+      "composition": [
+        {
+          "id": 2850,
+          "name": "Набор бокалов \"Роулинг\" зеленых",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/0008d8a8-6b34-4fc8-8bfd-b037d8bee98d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2850"
+        },
+        {
+          "id": 2968,
+          "name": "Набор приборов \"Сафо\" черных 2 шт",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/2d5a7b08-debd-4fbc-86ba-009e938a8502_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2968"
+        },
+        {
+          "id": 3061,
+          "name": "Скатерть канвас \"Гамма+\" пшеничная прямоугольная",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/866e5a01-8407-4087-a5f8-7681eee30680_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/prjamougolnye-skaterti-ybl-hyk-brm/3061"
+        },
+        {
+          "id": 4780,
+          "name": "Тарелка \"Барто\" прозрачная с черным кантом",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/cf0521f6-160c-4d9d-92a1-e7d649a9f3eb_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/4780"
+        },
+        {
+          "id": 5812,
+          "name": "Салфетка бархатная \"Бета\" зеленый чай",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/5073be07-0f12-4337-9a5a-7ff229f7be0a_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5812"
+        },
+        {
+          "id": 6828,
+          "name": "Стул \"Вашингтон\" серебряный, зеленый чай бархат",
+          "quantity": 6,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/4b4d224c-ddec-48f3-a6a6-eb709aa4cd0d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stulja-vashington-tme-wpx-ena-dci-xdv/6828"
+        }
+      ]
+    },
+    {
+      "productId": "demo-6294",
+      "demoId": "demo-6294",
+      "slug": "sety-sss",
+      "id": 6294,
+      "name": "Сет \"Фрушанте\"",
+      "price": 1275,
+      "rentalDays": 3,
+      "description": null,
+      "image": "https://cdn.frents.ru/ameli-rental/577b2b5c-a989-4662-a2eb-c9ea3cdc7d75_temp_image.jpg",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/sety-sss/6294",
+      "variants": [],
+      "composition": [
+        {
+          "id": 2819,
+          "name": "Вилка десертная \"Сафо\" черная",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/cf3e0918-7a34-40c2-950c-6badb84c8751_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2819"
+        },
+        {
+          "id": 2820,
+          "name": "Вилка столовая \"Сафо\" черная",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/d36a42b1-d993-4963-863d-b5ff0cc4d97f_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2820"
+        },
+        {
+          "id": 2823,
+          "name": "Нож десертный \"Сафо\" черный",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/fb31a429-a2ca-45e8-a6c6-509ca94d02b0_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2823"
+        },
+        {
+          "id": 2824,
+          "name": "Нож столовый \"Сафо\" черный",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/29a52f7b-68bc-4f22-b8fc-ad4c2beed575_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2824"
+        },
+        {
+          "id": 3128,
+          "name": "Бокал \"Роулинг\"  серый винный",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/9d436f8f-e3d6-43d0-8b0a-9d5c4d4da227_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3128"
+        },
+        {
+          "id": 3129,
+          "name": "Бокал \"Роулинг\"  серый под шампанское",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/722108cc-dfde-43dd-ac83-91067a145c9e_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3129"
+        },
+        {
+          "id": 3523,
+          "name": "Кольцо для салфетки \"Мопассан\"",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/0bc3e554-a283-4e82-8c45-aa59be996687_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/koltsa-dlja-salfetok-fnm-nhx/3523"
+        },
+        {
+          "id": 3656,
+          "name": "Стакан \"Роулинг\" серый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/5db27615-e297-4c47-b4cc-f001bc568e11_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3656"
+        },
+        {
+          "id": 4785,
+          "name": "Салфетка бархатная \"Бета\" черная",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/14df9d00-751a-4e54-80a9-ff8a2919d61e_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/4785"
+        },
+        {
+          "id": 5781,
+          "name": "Тарелка \"Мистраль\" прозрачная без канта",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/01b25fc2-480e-4b2a-a99f-72808097a79e_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/5781"
+        }
+      ]
+    },
+    {
+      "productId": "demo-6233",
+      "demoId": "demo-6233",
+      "slug": "sety-sss",
+      "id": 6233,
+      "name": "Сет \"Леннон\"",
+      "price": 1580,
+      "rentalDays": 3,
+      "description": "Ложка не входит в сет, вы можете добавить ее отдельно",
+      "image": "https://cdn.frents.ru/ameli-rental/82da59cb-07c5-485d-8042-7d0d2b83381b_temp_image.jpg",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/sety-sss/6233",
+      "variants": [],
+      "composition": [
+        {
+          "id": 2826,
+          "name": "Нож десертный \"Сафо\" золотой",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/68231b70-f896-49be-abe4-a62da576cda9_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2826"
+        },
+        {
+          "id": 2828,
+          "name": "Нож столовый \"Сафо\" золотой",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/af461429-e1c5-4f46-88c4-3257a97df9b1_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2828"
+        },
+        {
+          "id": 2830,
+          "name": "Вилка десертная \"Сафо\" золотая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/01b98c8b-efb9-4bd6-87f5-ffd8f25c95af_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2830"
+        },
+        {
+          "id": 2832,
+          "name": "Вилка столовая \"Сафо\" золотая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/842f7659-72c2-496b-9db7-d7a94c64568d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2832"
+        },
+        {
+          "id": 2884,
+          "name": "Бокал \"Роулинг\"  пыльно-розовый винный",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/5d7e1a18-8d07-4654-a7c0-9ee1934bf001_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2884"
+        },
+        {
+          "id": 3034,
+          "name": "Стакан \"Роулинг\"  светло-голубой",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/89080dea-4aac-4c97-bb2d-90d074e1e691_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3034"
+        },
+        {
+          "id": 3137,
+          "name": "Бокал \"Роулинг\"  сиреневый под шампанское",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/034584bd-2efe-4f89-ad92-8162252ce6ac_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/3137"
+        },
+        {
+          "id": 3519,
+          "name": "Кольцо для салфетки \"Доде\"",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/becab847-c0c4-4fa7-8241-bcc2d6d55709_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/koltsa-dlja-salfetok-fnm-nhx/3519"
+        },
+        {
+          "id": 4166,
+          "name": "Тарелка \"Вульф\" белая большая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/adccce80-4279-4289-9c9d-ef1c63db7bff_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/4166"
+        },
+        {
+          "id": 4170,
+          "name": "Тарелка \"Вульф\" белая малая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/680cd413-1cd5-4587-bbc8-06d70085e542_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/4170"
+        },
+        {
+          "id": 5847,
+          "name": "Салфетка бархатная \"Бета\" розовая сакура",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/e2fc655b-0d4b-4f13-9e33-e811c3a4e519_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5847"
+        },
+        {
+          "id": 6223,
+          "name": "Тарелка \"Линдгрен\" прозрачная без канта",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/15677aa3-6c67-4a26-bbb4-208ad902ae15_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/6223"
+        }
+      ]
+    },
+    {
+      "productId": "demo-6220",
+      "demoId": "demo-6220",
+      "slug": "sety-sss",
+      "id": 6220,
+      "name": "Сет \"Кобейн\"",
+      "price": 1355,
+      "rentalDays": 3,
+      "description": null,
+      "image": "https://cdn.frents.ru/ameli-rental/64913ba9-3d78-4471-a49c-72090051c104_temp_image.jpg",
+      "sourceUrl": "https://catalog.ameli-rental.ru/catalog/sety-sss/6220",
+      "variants": [],
+      "composition": [
+        {
+          "id": 2826,
+          "name": "Нож десертный \"Сафо\" золотой",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/68231b70-f896-49be-abe4-a62da576cda9_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2826"
+        },
+        {
+          "id": 2828,
+          "name": "Нож столовый \"Сафо\" золотой",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/af461429-e1c5-4f46-88c4-3257a97df9b1_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2828"
+        },
+        {
+          "id": 2830,
+          "name": "Вилка десертная \"Сафо\" золотая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/01b98c8b-efb9-4bd6-87f5-ffd8f25c95af_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2830"
+        },
+        {
+          "id": 2832,
+          "name": "Вилка столовая \"Сафо\" золотая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/842f7659-72c2-496b-9db7-d7a94c64568d_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/stolovye-pribory-zub-rrx/2832"
+        },
+        {
+          "id": 2845,
+          "name": "Бокал \"Роулинг\"  зеленый винный",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/7ae827bb-8e5d-4d90-98af-99bd6de14728_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2845"
+        },
+        {
+          "id": 2847,
+          "name": "Бокал \"Роулинг\"  зеленый под шампанское",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/78b6b960-2401-464c-9021-cbc1742e7c61_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2847"
+        },
+        {
+          "id": 2849,
+          "name": "Стакан \"Роулинг\"  зеленый",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/0844f4e2-427c-4a52-ab4f-cc6354876560_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/bokaly-drf-knl-afa-nmq/2849"
+        },
+        {
+          "id": 3521,
+          "name": "Кольцо для салфетки \"Кинг\"",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/dab63d65-9880-4df0-9c7f-f64e7bbf21dc_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/koltsa-dlja-salfetok-fnm-nhx/3521"
+        },
+        {
+          "id": 4166,
+          "name": "Тарелка \"Вульф\" белая большая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/adccce80-4279-4289-9c9d-ef1c63db7bff_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/4166"
+        },
+        {
+          "id": 4170,
+          "name": "Тарелка \"Вульф\" белая малая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/680cd413-1cd5-4587-bbc8-06d70085e542_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/tarelki-oir-djg/4170"
+        },
+        {
+          "id": 5646,
+          "name": "Салфетка \"Альфа\" оливковая",
+          "quantity": 1,
+          "image": "https://cdn.frents.ru/ameli-rental/regenerated-thumbnails/ac331c43-c36c-469b-b14f-83bf573f4f57_thumb.png",
+          "sourceUrl": "https://catalog.ameli-rental.ru/catalog/salfetki-hho-gfz-lpy/5646"
+        }
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build && node --experimental-strip-types scripts/build-pages.mjs",
     "start": "vite preview --host 127.0.0.1",
-    "lint": "oxlint app data lib tests vite.config.ts",
+    "lint": "oxlint app components/catalog data lib tests vite.config.ts",
     "format": "oxfmt",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --experimental-strip-types --test tests/cart.test.ts"

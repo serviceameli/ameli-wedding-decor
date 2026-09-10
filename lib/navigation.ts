@@ -7,7 +7,7 @@ export function siteBase(): string {
 }
 export const siteHref = (path = '') => `${siteBase()}${path.replace(/^\//, '')}`;
 export const categoryHref = (slug: string) => siteHref(`catalog/${slug}/`);
-export const productHref = (id: string) => siteHref(`solution/${id}/`);
+export const productHref = (id: string, variantId?: string) => siteHref(`solution/${id}/${variantId ? `?variant=${encodeURIComponent(variantId)}` : ""}`);
 export function resolveRoute() {
   const path = decodeURI(window.location.pathname).slice(siteBase().length).replace(/^\/+|\/+$/g, '').replace(/\/index\.html$/, '');
   if (!path || path === 'index.html') return { kind: 'home' as const };
