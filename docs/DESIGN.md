@@ -15,3 +15,5 @@ Scroll Craft source: https://github.com/nateherkai/scroll-craft. Original engine
 Multipage model: home, catalog directory, six category pages, fourteen separate product pages. Shared header, footer and persisted cart. The directory and sidebar use the same category data; new rows create new navigation and build pages.
 
 Homepage refinement: an asymmetric three-image portfolio distinguishes delivered work from category navigation. Quiet champagne panels frame visualization proof. Textile swatches are explicitly palette directions, not exact photographic fabric samples or available-stock selections. No extra colored brand accents were introduced.
+
+Catalog density refinement: 78px desktop / 68px mobile header, smaller editorial titles, one shared count/sort toolbar, three columns inside desktop categories and four in the full catalog. Under 640px a single readable card keeps all package prices and touch targets visible. The catalogue does not show the floating selection dock because the persistent header already provides cart access. Tested at laptop viewports 1366×768 and 1280×800, and phone viewports 390×844 and 360×800.
