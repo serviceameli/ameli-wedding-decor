@@ -3,9 +3,9 @@ import { catalogCategories } from '../data/categories.ts';
 import { demoProducts } from '../data/catalog.ts';
 const template = fs.readFileSync('dist/index.html', 'utf8');
 const pages = [
-  { path: 'catalog', title: 'Готовые решения для свадьбы | Амели' },
-  ...catalogCategories.map(c => ({ path: `catalog/${c.slug}`, title: `${c.label} | Амели` })),
-  ...demoProducts.map(p => ({ path: `solution/${p.id}`, title: `${p.name} | Амели` })),
+  { path: 'catalog', title: 'Готовые решения для свадьбы | Амели Декор' },
+  ...catalogCategories.map(c => ({ path: `catalog/${c.slug}`, title: `${c.label} | Амели Декор` })),
+  ...demoProducts.map(p => ({ path: `solution/${p.id}`, title: `${p.name} | Амели Декор` })),
 ];
 for (const page of pages) {
   const prefix = '../'.repeat(page.path.split('/').length);

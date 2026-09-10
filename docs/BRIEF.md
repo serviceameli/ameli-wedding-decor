@@ -27,3 +27,10 @@ Preflight: Node and Chrome available. ffmpeg missing; no video encoding or video
 Latest user steering: a multipage catalog, not a single landing. Preserve all six ready-solution category types from the rental site; future categories must be data-driven. Use Cyrillic Амели and Russian visitor-facing copy. Brand colors follow the original yellow, white and gray; no burgundy/cherry accent. This explicit brief overrides earlier independently authored palette choices.
 
 Final palette refinement from user: do not repeat the exact bright yellow; use a related, more refined wedding shade in beige/gold. Applied muted gold and champagne over ivory.
+
+## Homepage revision — September 10, 2026
+Owner supplied the exact brand name «Амели Декор — готовые решения для вашей свадьбы», 13 years of decor experience, a textile palette of over 100 colors, and visualization service. Main promise: collect wedding decor in about half an hour without repeated detail-by-detail decisions. Thirty minutes refers to the selection, not completed booking, availability checks or custom visualization.
+
+Homepage now follows: specific time-saving promise → linked category directory → a single interactive budget/composition example → visualization and delivered-result principle → color personalization → company/experience → real portfolio → three selection steps → next operational steps → FAQ → catalog CTA. The full product grid remains on catalog/category pages. No duplicated grid of generic wedding ideas.
+
+The visual pair uses set18319 and gallery1384, which source links to that set. Captions explain that floral styling and venue details are additional, rather than claiming an exact matched before/after. Actual matched same-project visualization and execution remains a recommended asset.
