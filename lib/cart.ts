@@ -43,8 +43,7 @@ export function cartTextLines(cart: CartItem[], products: Product[]): string[] {
   return resolveCart(cart, products).flatMap(({ product, variant, quantity }) => [
     `${product.name} — ${variant.label} × ${quantity}: ${new Intl.NumberFormat('ru-RU').format(variant.price * quantity)} ₽`,
     `${variant.unit}, аренда ${variant.rentalDays} дн.`,
-    'Состав на выбранное количество комплектов:',
-    ...variant.composition.map(item => `  ${item.name} — ${item.quantity * quantity} шт.`),
+    ...(variant.composition.length ? ['Состав на выбранное количество комплектов:', ...variant.composition.map(item => `  ${item.name} — ${item.quantity * quantity} шт.`)] : []),
     '',
   ]);
 }

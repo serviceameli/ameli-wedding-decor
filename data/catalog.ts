@@ -1,10 +1,8 @@
-import { catalogCategories } from './categories.ts';
 import { siteHref } from '../lib/navigation.ts';
 import { demoProducts } from './fixtures.ts';
 import type { Product } from './types.ts';
 export { demoProducts } from './fixtures.ts';
 export type { Product, ProductVariant, CompositionItem, Category } from './types.ts';
-export const categories = [{id: 'all', label: 'Все решения'}, ...catalogCategories.map(c => ({id: c.id, label: c.shortLabel}))];
 export interface CatalogProvider { listProducts(signal?: AbortSignal): Promise<Product[]>; }
 export const catalogProvider: CatalogProvider = {
   async listProducts(signal) {

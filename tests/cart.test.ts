@@ -75,3 +75,14 @@ void test('Every source-backed fixture has unique packages, valid compositions a
     if (product.category.includes('tables')) assert.deepEqual(product.variants.map(v => v.label), ['Базовый', 'Оптимальный', 'Премиум']);
   }
 });
+
+void test('Individual items and ready solutions share a cart without empty composition sections', () => {
+  const chair = { ...table, id: 'test-chair', kind: 'item' as const, category: 'chairs', name: 'Тестовый стул', defaultVariantId: 'test-standard', variants: [{ ...base, id: 'test-standard', price: 500, unit: 'за 1 стул', composition: [] }] };
+  const inventory = [...demoProducts, chair];
+  let cart = changeQuantity([], table.id, base.id, 1);
+  cart = changeQuantity(cart, chair.id, 'test-standard', 8);
+  assert.deepEqual(normalizeCart(cart, inventory), cart);
+  assert.equal(cartTotal(cart, inventory), 17780);
+  const itemText = cartTextLines(cart.filter(row => row.productId === chair.id), inventory).join('\n');
+  assert.match(itemText, /4\s000 ₽/); assert.match(itemText, /за 1 стул/); assert.doesNotMatch(itemText, /Состав/);
+});

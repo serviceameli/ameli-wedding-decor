@@ -5,8 +5,10 @@ import { ArrowUpRight, ArrowRight, Heart, ShoppingBag, Menu, X, Plus, Minus, Che
 import { Sheet, SheetContent, SheetTitle, SheetDescription, SheetClose } from '@/components/ui/sheet';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
-import { categories, catalogProvider, money, asset, type Product, type ProductVariant, type Category } from '@/data/catalog';
-import { catalogCategories } from '@/data/categories';
+import { catalogProvider, money, asset, type Product, type ProductVariant, type Category } from '@/data/catalog';
+import { catalogCategories, readySolutionCategories } from '@/data/categories';
+import { categoryDescendants } from '@/lib/catalog-tree';
+import { CatalogNavigation, CatalogBreadcrumb, UpcomingCategory } from '@/components/catalog/navigation';
 import { siteHref, categoryHref, productHref, resolveRoute } from '@/lib/navigation';
 import { cartTotal, changeQuantity, normalizeCart, resolveCart, cartKey, cartTextLines, localToday, MAX_QUANTITY, type CartItem } from '@/lib/cart';
 
@@ -36,16 +38,17 @@ function Brand({ footer = false }: { footer?: boolean }) {
   return <a href={siteHref()} className={`brand ${footer ? 'brand-footer' : ''}`} aria-label="Амели Декор, на главную"><span>Амели Декор<span className="brand-dot">.</span></span><small>ГОТОВЫЕ РЕШЕНИЯ ДЛЯ ВАШЕЙ СВАДЬБЫ</small></a>;
 }
 function CloseButton({ onClick }: { onClick: () => void }) { return <button className="icon-button close-button" aria-label="Закрыть" onClick={onClick}><X size={23} /></button>; }
+function productCount(count: number) { const last = count % 10, lastTwo = count % 100; return `${count} ${last === 1 && lastTwo !== 11 ? 'товар' : last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14) ? 'товара' : 'товаров'}`; }
 function solutionCount(count: number) { const last = count % 10, lastTwo = count % 100; return `${count} ${last === 1 && lastTwo !== 11 ? 'решение' : last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14) ? 'решения' : 'решений'}`; }
-function CategoryDirectory({ products, fullPage }: { products: Product[]; fullPage: boolean }) {
-  const Heading = fullPage ? 'h1' : 'h2';
-  return <section id="wedding-zones" className={`category-directory section-space page-width ${fullPage ? 'directory-page' : ''}`}>
-    <div className="section-heading"><div><p className="eyebrow">КАТАЛОГ СВАДЕБНОГО ДЕКОРА</p><Heading className="directory-title">Соберите свадьбу <em>по зонам.</em></Heading></div><p>Церемония, столы, сервировка и цветы.<br />{' '}В каждом разделе — готовые комплекты с составом и ценой.</p></div>
-    <div className="directory-grid">{catalogCategories.map((category, index) => <a className="directory-card" key={category.id} href={categoryHref(category.slug)}>
+function CategoryDirectory({ products }: { products: Product[] }) {
+  return <section id="wedding-zones" className="category-directory section-space page-width">
+    <div className="section-heading"><div><p className="eyebrow">КАТАЛОГ СВАДЕБНОГО ДЕКОРА</p><h2 className="directory-title">Соберите свадьбу <em>по зонам.</em></h2></div><p>Церемония, столы, сервировка и цветы.<br />{' '}В каждом разделе — готовые комплекты с составом и ценой.</p></div>
+    <div className="directory-grid">{readySolutionCategories.map((category, index) => <a className="directory-card" key={category.id} href={categoryHref(category.slug)}>
       <div className="directory-image"><img src={asset(category.image)} alt={category.label} width="600" height="500" loading="lazy" /><span className="directory-number">0{index + 1}</span></div>
       <div className="directory-caption"><h3>{category.label}</h3><ArrowUpRight size={22} /></div>
       <span className="directory-count">{solutionCount(products.filter(p => p.category === category.id).length)} в коллекции</span>
     </a>)}</div>
+    <a className="text-link directory-addons" href={siteHref('catalog/')}>Посуда, мебель и отдельный декор <ArrowUpRight size={18} /></a>
   </section>;
 }
 export default function Home() {
@@ -62,7 +65,7 @@ export default function Home() {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [favorites, setFavorites] = useState<string[]>([]);
   const [favoriteOnly, setFavoriteOnly] = useState(new URLSearchParams(window.location.search).get('favorites') === '1');
-  const [category, setCategory] = useState<Category>(activeCategory?.id || 'all');
+  const category = activeCategory?.id || 'all';
   const [sort, setSort] = useState('curated');
   const [cartOpen, setCartOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -80,6 +83,7 @@ export default function Home() {
   const count = cart.reduce((sum, item) => sum + item.quantity, 0);
   const selectedProducts = resolveCart(cart, products);
   const selectedZones = new Set(selectedProducts.map(row => row.product.category));
+  const cartCategories = [...readySolutionCategories, ...catalogCategories.filter(c => selectedZones.has(c.id) && !readySolutionCategories.some(ready => ready.id === c.id))];
 
   useEffect(() => {
     const controller = new AbortController();
@@ -171,7 +175,8 @@ export default function Home() {
     const url = URL.createObjectURL(new Blob(['\ufeff', contents], { type: 'text/plain;charset=utf-8' }));
     const link = document.createElement('a'); link.href = url; link.download = 'подборка-свадьбы-амели.txt'; link.click(); window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
-  let visibleProducts = products.filter(p => (category === 'all' || p.category === category) && (!favoriteOnly || favorites.includes(p.id)));
+  const branchIds = activeCategory ? categoryDescendants(activeCategory.id, catalogCategories) : null;
+  let visibleProducts = products.filter(p => (!branchIds || branchIds.has(p.category)) && (!favoriteOnly || favorites.includes(p.id)));
   if (sort === 'low') visibleProducts = [...visibleProducts].sort((a,b) => minimumPrice(a) - minimumPrice(b));
   if (sort === 'high') visibleProducts = [...visibleProducts].sort((a,b) => minimumPrice(b) - minimumPrice(a));
   const featuredProduct = products.find(product => product.id === 'demo-table-01');
@@ -199,7 +204,7 @@ export default function Home() {
           <p className="eyebrow"><span className="little-line" /> СВАДЕБНЫЙ ДЕКОР В АРЕНДУ</p>
           <h1>Декор вашей<br />{' '}свадьбы.<br />{' '}<em>За полчаса.</em></h1>
           <p className="hero-description">Соберите подборку из готовых решений — без выбора каждой детали и лишних согласований. Сочетания уже продуманы. Состав и бюджет видны сразу.</p>
-          <div className="hero-ctas"><a className="button button-primary" href={siteHref('catalog/')}>Собрать свою свадьбу <ArrowUpRight size={20} /></a><a className="text-link" href="#expectation">Увидеть результат заранее <ArrowRight size={17} /></a></div>
+          <div className="hero-ctas"><a className="button button-primary" href={categoryHref('ready-solutions')}>Собрать свою свадьбу <ArrowUpRight size={20} /></a><a className="text-link" href="#expectation">Увидеть результат заранее <ArrowRight size={17} /></a></div>
           <p className="hero-location">Амели Декор · Москва и Московская область</p>
         </div>
         <div className="hero-collage">
@@ -216,31 +221,30 @@ export default function Home() {
       </div>
 
       </>}
-      {!isHome && <div className="breadcrumb page-width"><a href={siteHref()}>Главная</a><span>/</span>{isCatalog ? <span>Каталог</span> : <><a href={siteHref('catalog/')}>Готовые решения</a><span>/</span><span>{activeCategory?.label || routeProduct?.name || 'Решение'}</span></>}</div>}
-      {(isHome || isCatalog) && <CategoryDirectory products={products} fullPage={isCatalog} />}
+      {!isHome && <CatalogBreadcrumb categoryId={activeCategory?.id || routeProduct?.category} productName={routeProduct?.name} isCatalog={isCatalog} />}
+      {isHome && <CategoryDirectory products={products} />}
       {route.kind === 'product' && loading && <output className="empty-state">Открываем решение…</output>}
       {route.kind === 'product' && routeProduct && routeVariant && <ProductPage product={routeProduct} variant={routeVariant} choose={id => chooseVariant(routeProduct, id)} add={() => add(routeProduct, routeVariant)} openCart={openCart} selected={cart.some(row => row.productId === routeProduct.id && row.variantId === routeVariant.id)} />}
       {(route.kind === 'missing' || (route.kind === 'product' && !loading && !routeProduct)) && <section className="page-width section-space empty-state"><h1>Страница не найдена</h1><p>Выберите подходящий раздел в каталоге.</p><a className="button button-primary" href={siteHref('catalog/')}>Перейти в каталог</a></section>}
-      {(isCatalog || isCategory) && <div className={isCategory ? 'catalog-page-layout page-width' : ''}>
-      {isCategory && <aside className="catalog-sidebar"><a href={siteHref('catalog/')} className="sidebar-all">Все готовые решения <ArrowUpRight size={15} /></a><nav className="desktop-catalog-nav" aria-label="Разделы каталога">{catalogCategories.map(c => <a key={c.id} href={categoryHref(c.slug)} className={activeCategory?.id === c.id ? 'active' : ''}>{c.label}<span>{products.filter(p => p.category === c.id).length}</span></a>)}</nav><details className="mobile-catalog-nav"><summary>Разделы каталога <Plus size={18} /></summary><nav aria-label="Выбрать раздел">{catalogCategories.map(c => <a key={c.id} href={categoryHref(c.slug)} className={activeCategory?.id === c.id ? 'active' : ''}>{c.label}<ArrowUpRight size={15} /></a>)}</nav></details><div className="sidebar-help"><h3>Поможем выбрать</h3><p>Сочетания, количество и детали вашей площадки.</p><a href="https://t.me/amelirental" target="_blank" rel="noreferrer">Написать команде <ArrowUpRight size={15} /></a></div></aside>}
-      <section id="collection" className={isCategory ? 'collection catalog-page-content' : 'collection catalog-overview section-space page-width'} data-sc-act="flow">
+      {(isCatalog || isCategory) && <div className="catalog-page-layout catalog-shell page-width">
+      <CatalogNavigation activeId={activeCategory?.id} products={products} />
+      <section id="collection" className="collection catalog-page-content catalog-results" data-sc-act="flow">
         <div className="section-heading">
-          <div><p className="eyebrow">ГОТОВЫЕ РЕШЕНИЯ</p>{isCategory ? <h1 className="category-page-title">{activeCategory?.label}</h1> : <h2>Вся коллекция <em>решений.</em></h2>}</div>
-          <p>{activeCategory?.description || 'Смотрите готовые сочетания и собирайте свою подборку.'}</p>
+          <div><h1 className="category-page-title">{activeCategory?.label || 'Каталог для вашей свадьбы'}</h1></div>
+          <p>{activeCategory?.description || 'Готовые решения и отдельные предметы — в одну подборку.'}</p>
         </div>
-        {!isCategory && <fieldset className="category-tabs catalog-zone-filters" aria-label="Зона свадьбы">{categories.map(item => <button key={item.id} aria-pressed={category === item.id} className={category === item.id ? 'active' : ''} onClick={() => { setCategory(item.id); setFavoriteOnly(false); }}>{item.label}</button>)}</fieldset>}
         <div className="catalog-toolbar">
-          <div className="catalog-meta"><span>{favoriteOnly ? 'Избранные решения' : solutionCount(visibleProducts.length)}{favoriteOnly && <button onClick={() => setFavoriteOnly(false)}>Показать все <X size={13} /></button>}</span><span className="demo-label">Демо-каталог · наличие уточняется</span></div>
+          <div className="catalog-meta"><span>{favoriteOnly ? 'Избранное' : productCount(visibleProducts.length)}{favoriteOnly && <button onClick={() => setFavoriteOnly(false)}>Показать все <X size={13} /></button>}</span><span className="demo-label">Демо-каталог · наличие уточняется</span></div>
           <Select value={sort} onValueChange={value => setSort(value || 'curated')}><SelectTrigger className="sort-select" aria-label="Сортировка"><SelectValue>{sort === 'low' ? 'Сначала дешевле' : sort === 'high' ? 'Сначала дороже' : 'Подборка Амели'}</SelectValue></SelectTrigger><SelectContent><SelectItem value="curated">Подборка Амели</SelectItem><SelectItem value="low">Сначала дешевле</SelectItem><SelectItem value="high">Сначала дороже</SelectItem></SelectContent></Select>
         </div>
         {loading && <output className="empty-state">Собираем коллекцию…</output>}
         {loadError && <div className="empty-state" role="alert"><h3>Коллекция не загрузилась</h3><button className="button button-outline" onClick={() => window.location.reload()}>Попробовать ещё раз</button></div>}
-        {!loading && !loadError && visibleProducts.length === 0 && <div className="empty-state"><Heart size={32} /><h3>Здесь будут ваши любимые решения</h3><p>Нажмите на сердечко у понравившегося комплекта.</p><button className="button button-outline" onClick={() => { setFavoriteOnly(false); setCategory('all'); }}>Посмотреть коллекцию</button></div>}
+        {!loading && !loadError && visibleProducts.length === 0 && (favoriteOnly ? <div className="empty-state"><Heart size={32} /><h3>Здесь пока нет избранного</h3><p>Сохраняйте понравившиеся товары с помощью сердечка.</p><button className="button button-outline" onClick={() => setFavoriteOnly(false)}>Показать товары раздела</button></div> : <UpcomingCategory category={activeCategory} />)}
         <div className="product-grid">{visibleProducts.map(product => {
           const variant = getVariant(product, variantChoices[product.id]);
           return <ProductCard key={product.id} product={product} variant={variant} choose={id => chooseVariant(product, id)} add={() => add(product, variant)} selected={cart.some(row => row.productId === product.id && row.variantId === variant.id)} favorite={favorites.includes(product.id)} toggleFavorite={() => toggleFavorite(product.id)} />;
         })}</div>
-        <p className="catalog-footnote">Фотографии, составы и цены — из основного каталога Амели. Данные показаны для демонстрации и не обновляются автоматически. Наличие и итоговую стоимость подтверждает команда.</p>
+        {visibleProducts.length > 0 && <p className="catalog-footnote">Фотографии, составы и цены — из основного каталога Амели. Данные показаны для демонстрации и не обновляются автоматически. Наличие и итоговую стоимость подтверждает команда.</p>}
       </section>
       </div>}
       {isHome && <>
@@ -253,12 +257,12 @@ export default function Home() {
 
       <section id="questions" className="faq-section page-width section-space" data-sc-act="flow"><div className="faq-intro"><p className="eyebrow">ПЕРЕД ТЕМ КАК ВЫБРАТЬ</p><h2>Чтобы выбирать<br />{' '}<em>было спокойно.</em></h2><p>Про бюджет, визуализацию<br />{' '}и следующий шаг после выбора.</p><a className="text-link" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Задать свой вопрос <ArrowUpRight size={18} /></a></div><div className="faq-list">{FAQ.map(([question, answer]) => <details key={question}><summary>{question}<Plus size={19} /></summary><p>{answer}</p></details>)}</div></section>
 
-      <section className="closing page-width" data-sc-act="flow"><div className="closing-inner"><span className="closing-symbol" aria-hidden="true">а.</span><div><h2>Полчаса на декор.<br />{' '}Больше времени <em>на вас.</em></h2><p>Выберите готовые решения и соберите подборку.<br />{' '}У каждой детали уже есть своё место.</p></div><div className="closing-actions"><a className="button button-primary" href={siteHref('catalog/')}>Собрать свою свадьбу <ArrowUpRight size={20} /></a><a className="text-link" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Обсудить с Амели <Send size={17} /></a></div></div></section>
+      <section className="closing page-width" data-sc-act="flow"><div className="closing-inner"><span className="closing-symbol" aria-hidden="true">а.</span><div><h2>Полчаса на декор.<br />{' '}Больше времени <em>на вас.</em></h2><p>Выберите готовые решения и соберите подборку.<br />{' '}У каждой детали уже есть своё место.</p></div><div className="closing-actions"><a className="button button-primary" href={categoryHref('ready-solutions')}>Собрать свою свадьбу <ArrowUpRight size={20} /></a><a className="text-link" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Обсудить с Амели <Send size={17} /></a></div></div></section>
       </>}
     </main>
     <footer className="site-footer page-width"><div className="footer-top"><Brand footer /><div><p>Амели Декор — готовые решения для вашей свадьбы.</p><a href="https://catalog.ameli-rental.ru" target="_blank" rel="noreferrer">Весь каталог аренды <ArrowUpRight size={15} /></a></div><div className="footer-contact"><a href="tel:+79850843855">+7 985 084-38-55</a><span>Клиентская линия: 09:00–21:00</span><a href="https://t.me/amelirental" target="_blank" rel="noreferrer">Телеграм <ArrowUpRight size={14} /></a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Амели Декор</span><span>Концепция свадебной коллекции. Демо-версия.</span><a href="https://catalog.ameli-rental.ru" target="_blank" rel="noreferrer">Основной сайт <ArrowUpRight size={13} /></a></div></footer>
 
-    {count > 0 && !cartOpen && !isCatalog && !isCategory && <div className="selection-dock"><div className="dock-thumbnails">{selectedProducts.slice(0,3).map(row => <img key={cartKey(row)} src={asset(row.variant.image)} alt="" />)}</div><div className="dock-copy"><strong>Ваша свадьба складывается</strong><span>{selectedZones.size} из {catalogCategories.length} разделов выбрано · {money(total)}</span></div><button onClick={openCart}>Посмотреть <ArrowUpRight size={18} /></button></div>}
+    {count > 0 && !cartOpen && !isCatalog && !isCategory && <div className="selection-dock"><div className="dock-thumbnails">{selectedProducts.slice(0,3).map(row => <img key={cartKey(row)} src={asset(row.variant.image)} alt="" />)}</div><div className="dock-copy"><strong>Ваша свадьба складывается</strong><span>Выбрано разделов: {selectedZones.size} · {money(total)}</span></div><button onClick={openCart}>Посмотреть <ArrowUpRight size={18} /></button></div>}
     <output className={`toast ${toast ? 'toast-visible' : ''}`} aria-live="polite">{toast && <><Check size={19} /><span>{toast}</span></>}</output>
 
     <Sheet open={menuOpen} onOpenChange={setMenuOpen}><SheetContent className="menu-sheet" showCloseButton={false}><CloseButton onClick={() => setMenuOpen(false)} /><SheetTitle className="sheet-heading">Ваша свадьба с Амели Декор</SheetTitle><SheetDescription>Готовые решения для вашей свадьбы</SheetDescription><nav className="mobile-navigation">{NAV.map(link => <a key={link.href} href={siteHref(link.href)} onClick={() => setMenuOpen(false)}>{link.label}<ArrowUpRight /></a>)}</nav><a className="button button-primary" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Обсудить свадьбу <Send size={18} /></a></SheetContent></Sheet>
@@ -266,12 +270,12 @@ export default function Home() {
 
     <Sheet open={cartOpen} onOpenChange={setCartOpen}><SheetContent className="cart-sheet" showCloseButton={false}><CloseButton onClick={() => setCartOpen(false)} /><div className="cart-header"><p className="eyebrow">ДЕКОР ВАШЕЙ СВАДЬБЫ</p><SheetTitle className="sheet-heading">{checkoutStep === 'cart' ? 'Моя свадьба' : checkoutStep === 'form' ? 'Детали вашего дня' : 'Ваша подборка готова'}</SheetTitle><SheetDescription>{checkoutStep === 'cart' ? 'Добавляйте то, что нравится. Всё выбранное сохранится на этом устройстве.' : checkoutStep === 'form' ? 'Заполните данные, чтобы посмотреть, как будет выглядеть заявка.' : 'Это демонстрация. Заявка не отправлена, декор не забронирован.'}</SheetDescription></div>
       {count === 0 ? <div className="empty-cart"><ShoppingBag size={45} strokeWidth={1} /><h3>Пока только предвкушение</h3><p>Добавьте первое решение,<br />{' '}и ваша свадьба начнёт складываться.</p><SheetClose className="button button-primary" onClick={() => goToCatalog()}>Выбрать декор <ArrowUpRight size={20} /></SheetClose></div> : <>
-        <div className="zone-progress" aria-label="Выбранные зоны">{catalogCategories.map(c => <span key={c.id} className={selectedZones.has(c.id as Category) ? 'complete' : ''}>{selectedZones.has(c.id as Category) ? <Check size={13} /> : <span className="zone-dot" />}{c.shortLabel}</span>)}</div>
+        <div className="zone-progress" aria-label="Выбранные зоны">{cartCategories.map(c => <span key={c.id} className={selectedZones.has(c.id as Category) ? 'complete' : ''}>{selectedZones.has(c.id as Category) ? <Check size={13} /> : <span className="zone-dot" />}{c.shortLabel}</span>)}</div>
         {checkoutStep === 'cart' && <><div className="cart-items">{selectedProducts.map(({ product, variant, quantity }) => <div className="cart-item" key={cartKey({productId: product.id, variantId: variant.id})}>
           <img src={asset(variant.image)} alt={product.name} width="100" height="120" />
           <div className="cart-item-content"><h3><a href={productHref(product.id, variant.id)}>{product.name}</a></h3><p className="cart-variant-label">{variant.label}</p><p>{variant.unit} · {variant.rentalDays} дн.</p>
             <div className="cart-item-bottom"><div className="quantity-controls"><button aria-label={`Уменьшить количество: ${product.name}, ${variant.label}`} onClick={() => setCart(prev => changeQuantity(prev, product.id, variant.id, -1))}><Minus size={15} /></button><span aria-live="polite">{quantity}</span><button disabled={quantity >= MAX_QUANTITY} aria-label={`Увеличить количество: ${product.name}, ${variant.label}`} onClick={() => setCart(prev => changeQuantity(prev, product.id, variant.id, 1))}><Plus size={15} /></button></div><strong>{money(variant.price * quantity)}</strong></div>
-            <details className="cart-composition"><summary>Состав комплекта <Plus size={13} /></summary><p>Количество на один комплект</p><CompositionList variant={variant} compact /></details>
+            {variant.composition.length > 0 && <details className="cart-composition"><summary>Состав комплекта <Plus size={13} /></summary><p>Количество на один комплект</p><CompositionList variant={variant} compact /></details>}
           </div><button className="remove-item" aria-label={`Удалить: ${product.name}, ${variant.label}`} onClick={() => setCart(prev => changeQuantity(prev, product.id, variant.id, -quantity))}><Trash2 size={17} /></button>
         </div>)}
 </div><div className="cart-summary"><div><span>Примерная стоимость</span><strong>{money(total)}</strong></div><p>Доставка, монтаж и дополнительные услуги рассчитываются отдельно. Наличие на дату пока не проверено.</p><button className="button button-primary full-width" onClick={() => setCheckoutStep('form')}>Перейти к оформлению <ArrowRight size={20} /></button><span className="demo-caption">Демо-режим: без оплаты и отправки заявки</span></div></>}

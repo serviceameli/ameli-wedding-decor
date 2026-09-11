@@ -10,9 +10,9 @@ const positions = (n: number) => `${n} ${n % 10 === 1 && n % 100 !== 11 ? 'по�
 
 type VariantProps = { product: Product; variant: ProductVariant; choose: (id: string) => void; surface: 'card' | 'page' };
 export function VariantPicker({ product, variant, choose, surface }: VariantProps) {
-  if (product.variants.length === 1) return <p className="single-variant">Одна комплектация</p>;
+  if (product.variants.length === 1) return <p className="single-variant">{product.kind === 'item' ? 'Отдельный предмет' : 'Одна комплектация'}</p>;
   return <fieldset className={`variant-picker variant-picker-${surface} ${product.variants.some(v => v.label.length > 15) ? 'variant-picker-long' : ''}`}>
-    <legend>{surface === 'card' ? `${product.variants.length} варианта комплектации` : 'Выберите комплектацию'}</legend>
+    <legend>{product.kind === 'item' ? 'Выберите вариант' : surface === 'card' ? `${product.variants.length} варианта комплектации` : 'Выберите комплектацию'}</legend>
     <div className="variant-options">{product.variants.map(option => <label key={option.id} className={`variant-option ${option.id === variant.id ? 'is-active' : ''}`}>
       <input type="radio" name={`${surface}-${product.id}`} value={option.id} checked={option.id === variant.id} onChange={() => choose(option.id)} />
       <span className="variant-option-label">{option.label}</span><span className="variant-option-price">{money(option.price)}</span>
@@ -36,7 +36,7 @@ export function ProductCard({ product, variant, choose, add, selected, favorite,
     <div className="product-category"><span>{catalogCategories.find(c => c.id === product.category)?.shortLabel}</span>{product.category !== "ceremony" && <Palette colors={product.palette} />}</div>
     <a className="product-title" href={href}><h3>{product.name}</h3></a><p className="product-subtitle">{product.category === "ceremony" ? variant.unit.replace("за зону", "Церемония") : product.subtitle}</p>
     <VariantPicker product={product} variant={variant} choose={choose} surface="card" />
-    <a className="composition-preview-link" href={`${href}#composition`}>Состав: {positions(variant.composition.length)}<ArrowUpRight size={15} /></a>
+    {variant.composition.length > 0 && <a className="composition-preview-link" href={`${href}#composition`}>Состав: {positions(variant.composition.length)}<ArrowUpRight size={15} /></a>}
     <div className="product-bottom"><div aria-live="polite"><strong>{money(variant.price)}</strong><span>{variant.unit}</span><span>аренда {variant.rentalDays} дн.</span></div><button className={`add-button ${selected ? 'has-item' : ''}`} onClick={add} aria-label={`Добавить в корзину: ${product.name}, ${variant.label}`}>{selected ? <Check size={18} /> : <Plus size={18} />}<span>{selected ? 'Добавить ещё' : 'В мою свадьбу'}</span></button></div>
   </article>;
 }
@@ -45,7 +45,7 @@ type PageProps = { product: Product; variant: ProductVariant; choose: (id: strin
 export function ProductPage({ product, variant, choose, add, openCart, selected }: PageProps) {
   const category = catalogCategories.find(c => c.id === product.category);
   return <section className="product-page page-width">
-    <figure className="product-page-photo"><img src={asset(variant.image)} alt={`${product.name} — ${variant.label}`} width="1100" height="1000" fetchPriority="high" /><figcaption>Общий образ. Точный состав — в выбранном варианте.</figcaption></figure>
+    <figure className="product-page-photo"><img src={asset(variant.image)} alt={`${product.name} — ${variant.label}`} width="1100" height="1000" fetchPriority="high" /><figcaption>{product.kind === 'item' ? 'Изображение выбранного предмета.' : 'Общий образ. Точный состав — в выбранном варианте.'}</figcaption></figure>
     <div className="product-page-copy detail-copy">
       <a className="eyebrow" href={category ? categoryHref(category.slug) : siteHref('catalog/')}>{category?.label}</a>
       <h1 className="detail-title">{product.name}</h1><p className="detail-description">{product.description}</p>{product.category !== "ceremony" && <Palette colors={product.palette} />}
@@ -53,12 +53,12 @@ export function ProductPage({ product, variant, choose, add, openCart, selected 
       <div className="detail-price" aria-live="polite"><strong>{money(variant.price)}</strong><span>{variant.unit} · аренда {variant.rentalDays} дн.</span></div>
       <button className="button button-primary full-width" onClick={add}>{selected ? 'Добавить ещё' : 'В мою свадьбу'} {selected ? <Check size={19} /> : <Plus size={19} />}</button>
       {selected && <button className="text-link detail-cart-link" onClick={openCart}>Перейти к подборке <ArrowRight size={18} /></button>}
-      <section id="composition" className="product-composition" aria-label="Состав выбранного варианта">
+      {variant.composition.length > 0 && <section id="composition" className="product-composition" aria-label="Состав выбранного варианта">
         <div className="composition-heading"><h2>Состав комплекта</h2><span>{variant.label}</span></div>
         <p className="composition-count">{positions(variant.composition.length)} · количество на один комплект</p>
         <CompositionList variant={variant} />
         <p className="composition-explanation">В выбранный вариант входят предметы из этого списка. Другие детали на фотографии могут не входить в комплект.</p>
-      </section>
+      </section>}
       <section className="source-description" aria-label="Описание выбранного варианта"><h2>Описание</h2>{variant.description.split(/\n+/).filter(Boolean).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</section>
       <div className="detail-note"><strong>Предварительный расчёт</strong>Цены и составы взяты из основного каталога для демонстрации. Перед заказом команда подтвердит наличие на дату, итоговую стоимость и дополнительные услуги.</div>
       <div className="product-service-note"><CalendarDays size={19} /><p>Добавление в корзину не создаёт бронь.<br />Доставка и установка обсуждаются отдельно.</p></div>

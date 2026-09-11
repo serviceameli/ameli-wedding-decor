@@ -1,9 +1,14 @@
 import fs from 'node:fs';
 import { catalogCategories } from '../data/categories.ts';
+import { validateCatalogTree } from '../lib/catalog-tree.ts';
 import { demoProducts } from '../data/catalog.ts';
+validateCatalogTree(catalogCategories);
+for (const product of demoProducts) {
+  if (!catalogCategories.some(c => c.id === product.category)) throw new Error(`Unknown category: ${product.id}`);
+}
 const template = fs.readFileSync('dist/index.html', 'utf8');
 const pages = [
-  { path: 'catalog', title: 'Готовые решения для свадьбы | Амели Декор' },
+  { path: 'catalog', title: 'Каталог для вашей свадьбы | Амели Декор' },
   ...catalogCategories.map(c => ({ path: `catalog/${c.slug}`, title: `${c.label} | Амели Декор` })),
   ...demoProducts.map(p => ({ path: `solution/${p.id}`, title: `${p.name} | Амели Декор` })),
 ];

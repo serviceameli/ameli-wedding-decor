@@ -18,6 +18,8 @@ export type ProductVariant = {
   sourceUrl: string;
 };
 export type Product = {
+  /** Omitted in older fixtures; defaults to a ready-made solution. */
+  kind?: 'solution' | 'item';
   id: string;
   name: string;
   subtitle: string;
