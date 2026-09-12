@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=22.13.0"
+    "node": ">=22.13.0 <23",
+    "npm": ">=10 <11"
   },
   "scripts": {
     "dev": "vite",
@@ -12,7 +13,9 @@
     "lint": "oxlint app components/catalog components/home data lib tests vite.config.ts",
     "format": "oxfmt",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "node --experimental-strip-types --test tests/*.test.ts"
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "doctor": "node --experimental-strip-types scripts/doctor.mjs",
+    "catalog:sync": "node --experimental-strip-types scripts/sync-catalog.mjs"
   },
   "dependencies": {
     "react": "19.2.6",

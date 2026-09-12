@@ -29,10 +29,15 @@ export function categoryDescendants(id: string, nodes: CatalogCategory[]) {
   return ids;
 }
 
-export function categoryCounts(products: { category: string }[], nodes: CatalogCategory[]) {
+export function belongsToBranch(product: { category: string; categoryIds?: string[] }, ids: Set<string>) {
+  return (product.categoryIds || [product.category]).some(id => ids.has(id));
+}
+
+export function categoryCounts(products: { category: string; categoryIds?: string[] }[], nodes: CatalogCategory[]) {
   const counts = new Map<string, number>();
   for (const product of products) {
-    for (const node of categoryTrail(product.category, nodes)) counts.set(node.id, (counts.get(node.id) || 0) + 1);
+    const ancestors = new Set((product.categoryIds || [product.category]).flatMap(id => categoryTrail(id, nodes).map(node => node.id)));
+    for (const id of ancestors) counts.set(id, (counts.get(id) || 0) + 1);
   }
   return counts;
 }
@@ -42,9 +47,13 @@ export function validateCatalogTree(nodes: CatalogCategory[]) {
   const ids = new Set<string>();
   const slugs = new Set<string>();
   for (const node of nodes) {
-    if (ids.has(node.id) || slugs.has(node.slug)) throw new Error(`Duplicate category: ${node.id}`);
-    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(node.slug)) throw new Error(`Invalid category slug: ${node.slug}`);
-    ids.add(node.id); slugs.add(node.slug);
+    if (ids.has(node.id)) throw new Error(`Duplicate category: ${node.id}`);
+    for (const slug of [node.slug, ...(node.aliases || [])]) {
+      if (slugs.has(slug)) throw new Error(`Duplicate category: ${slug}`);
+      if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) throw new Error(`Invalid category slug: ${slug}`);
+      slugs.add(slug);
+    }
+    ids.add(node.id);
   }
   const byId = new Map(nodes.map(node => [node.id, node]));
   for (const node of nodes) {

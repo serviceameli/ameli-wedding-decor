@@ -11,7 +11,7 @@ export type ProductVariant = {
   label: string;
   price: number;
   unit: string;
-  rentalDays: number;
+  rentalDays: number | null;
   image: string;
   description: string;
   composition: CompositionItem[];
@@ -24,6 +24,7 @@ export type Product = {
   name: string;
   subtitle: string;
   category: Category;
+  categoryIds?: Category[];
   image: string;
   palette: string[];
   tag?: string;

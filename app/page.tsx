@@ -5,9 +5,9 @@ import { ArrowUpRight, ArrowRight, Heart, ShoppingBag, Menu, X, Plus, Minus, Che
 import { Sheet, SheetContent, SheetTitle, SheetDescription, SheetClose } from '@/components/ui/sheet';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
-import { catalogProvider, money, asset, type Product, type ProductVariant, type Category } from '@/data/catalog';
+import { catalogProvider, catalogUpdatedAt, rentalPeriod, money, asset, type Product, type ProductVariant, type Category } from '@/data/catalog';
 import { catalogCategories, readySolutionCategories } from '@/data/categories';
-import { categoryDescendants } from '@/lib/catalog-tree';
+import { categoryDescendants, belongsToBranch } from '@/lib/catalog-tree';
 import { CatalogNavigation, CatalogBreadcrumb, UpcomingCategory } from '@/components/catalog/navigation';
 import { siteHref, categoryHref, productHref, resolveRoute } from '@/lib/navigation';
 import { cartTotal, changeQuantity, normalizeCart, resolveCart, cartKey, cartTextLines, localToday, MAX_QUANTITY, type CartItem } from '@/lib/cart';
@@ -28,7 +28,7 @@ const FAQ = [
   ['Чем отличаются базовый, оптимальный и премиум?', 'Количеством и набором деталей. При переключении меняются цена и состав: вы сразу видите, за что платите. У некоторых решений есть другие варианты — например, по количеству посадочных мест.'],
   ['Как рассчитать количество и полный бюджет?', 'У каждой цены есть единица расчёта: за зону, комплект на определённое число гостей или одну сервировку. Добавьте нужное количество в корзину. Доставка, монтаж, демонтаж и дополнительные услуги рассчитываются отдельно по дате и площадке.'],
   ['Флористика и всё, что на фото, входят в комплект?', 'В комплект входят позиции из состава выбранного варианта. Цветы, свечи и другие детали на фотографии могут быть дополнительными. До бронирования фиксируем выбранный состав и визуализацию, чтобы результат был понятен заранее.'],
-  ['Подборка в корзине уже бронирует декор?', 'Корзина сохраняет ваш выбор на этом устройстве. Наличие на дату и итоговую стоимость подтверждает команда. Сейчас сайт работает в демонстрационном режиме: заявки не отправляются, оплата и бронирование не создаются. Подборку можно скачать и обсудить с нами.'],
+  ['Подборка в корзине уже бронирует декор?', 'Корзина сохраняет ваш выбор на этом устройстве. Наличие на дату и итоговую стоимость подтверждает команда. Заявки через сайт пока не отправляются, оплата и бронирование не создаются. Подборку можно скачать и обсудить с нами.'],
 ];
 
 type Inquiry = { name: string; phone: string; date: string; venue: string; guests: string; comment: string };
@@ -46,7 +46,7 @@ function CategoryDirectory({ products }: { products: Product[] }) {
     <div className="directory-grid">{readySolutionCategories.map((category, index) => <a className="directory-card" key={category.id} href={categoryHref(category.slug)}>
       <div className="directory-image"><img src={asset(category.image)} alt={category.label} width="600" height="500" loading="lazy" /><span className="directory-number">0{index + 1}</span></div>
       <div className="directory-caption"><h3>{category.label}</h3><ArrowUpRight size={22} /></div>
-      <span className="directory-count">{solutionCount(products.filter(p => p.category === category.id).length)} в коллекции</span>
+      <span className="directory-count">{solutionCount(products.filter(p => belongsToBranch(p, new Set([category.id]))).length)} в коллекции</span>
     </a>)}</div>
     <a className="text-link directory-addons" href={siteHref('catalog/')}>Посуда, мебель и отдельный декор <ArrowUpRight size={18} /></a>
   </section>;
@@ -67,6 +67,7 @@ export default function Home() {
   const [favoriteOnly, setFavoriteOnly] = useState(new URLSearchParams(window.location.search).get('favorites') === '1');
   const category = activeCategory?.id || 'all';
   const [sort, setSort] = useState('curated');
+  const [visibleLimit, setVisibleLimit] = useState(24);
   const [cartOpen, setCartOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [checkoutStep, setCheckoutStep] = useState<'cart' | 'form' | 'review'>('cart');
@@ -171,15 +172,15 @@ export default function Home() {
     setInquiry(draft); setFormError(''); setCheckoutStep('review');
   }
   function downloadSelection() {
-    const contents = ['АМЕЛИ ДЕКОР · ПОДБОРКА СВАДЕБНОГО ДЕКОРА', 'Демонстрационный расчёт. Не является заказом или бронированием.', '', `Имя: ${inquiry.name}`, `Телефон: ${inquiry.phone}`, `Дата: ${inquiry.date}`, `Площадка: ${inquiry.venue || 'Уточняется'}`, `Гостей: ${inquiry.guests || 'Уточняется'}`, '', ...cartTextLines(cart, products), '', `Примерная сумма: ${money(total)}`, 'Доставка, монтаж и дополнительные услуги рассчитываются отдельно.', `Комментарий: ${inquiry.comment || 'Нет'}`, '', 'Ничего не отправлено. Контакт Амели Декор: +7 985 084-38-55, https://t.me/amelirental'].join('\n');
+    const contents = ['АМЕЛИ ДЕКОР · ПОДБОРКА СВАДЕБНОГО ДЕКОРА', 'Предварительный расчёт. Не является заказом или бронированием.', '', `Имя: ${inquiry.name}`, `Телефон: ${inquiry.phone}`, `Дата: ${inquiry.date}`, `Площадка: ${inquiry.venue || 'Уточняется'}`, `Гостей: ${inquiry.guests || 'Уточняется'}`, '', ...cartTextLines(cart, products), '', `Примерная сумма: ${money(total)}`, 'Доставка, монтаж и дополнительные услуги рассчитываются отдельно.', `Комментарий: ${inquiry.comment || 'Нет'}`, '', 'Ничего не отправлено. Контакт Амели Декор: +7 985 084-38-55, https://t.me/amelirental'].join('\n');
     const url = URL.createObjectURL(new Blob(['\ufeff', contents], { type: 'text/plain;charset=utf-8' }));
     const link = document.createElement('a'); link.href = url; link.download = 'подборка-свадьбы-амели.txt'; link.click(); window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   const branchIds = activeCategory ? categoryDescendants(activeCategory.id, catalogCategories) : null;
-  let visibleProducts = products.filter(p => (!branchIds || branchIds.has(p.category)) && (!favoriteOnly || favorites.includes(p.id)));
+  let visibleProducts = products.filter(p => (!branchIds || belongsToBranch(p, branchIds)) && (!favoriteOnly || favorites.includes(p.id)));
   if (sort === 'low') visibleProducts = [...visibleProducts].sort((a,b) => minimumPrice(a) - minimumPrice(b));
   if (sort === 'high') visibleProducts = [...visibleProducts].sort((a,b) => minimumPrice(b) - minimumPrice(a));
-  const featuredProduct = products.find(product => product.id === 'demo-table-01');
+  const featuredProduct = products.find(product => product.category === 'round-tables' && product.name.includes('Изысканный жемчуг') && product.variants.length > 1) || products.find(product => product.category === 'round-tables' && product.variants.length > 1);
   const featuredVariant = featuredProduct ? getVariant(featuredProduct, variantChoices[featuredProduct.id]) : null;
 
   return <>
@@ -234,17 +235,18 @@ export default function Home() {
           <p>{activeCategory?.description || 'Готовые решения и отдельные предметы — в одну подборку.'}</p>
         </div>
         <div className="catalog-toolbar">
-          <div className="catalog-meta"><span>{favoriteOnly ? 'Избранное' : productCount(visibleProducts.length)}{favoriteOnly && <button onClick={() => setFavoriteOnly(false)}>Показать все <X size={13} /></button>}</span><span className="demo-label">Демо-каталог · наличие уточняется</span></div>
+          <div className="catalog-meta"><span>{favoriteOnly ? 'Избранное' : productCount(visibleProducts.length)}{favoriteOnly && <button onClick={() => setFavoriteOnly(false)}>Показать все <X size={13} /></button>}</span><span className="demo-label">Каталог Амели · наличие уточняется</span></div>
           <Select value={sort} onValueChange={value => setSort(value || 'curated')}><SelectTrigger className="sort-select" aria-label="Сортировка"><SelectValue>{sort === 'low' ? 'Сначала дешевле' : sort === 'high' ? 'Сначала дороже' : 'Подборка Амели'}</SelectValue></SelectTrigger><SelectContent><SelectItem value="curated">Подборка Амели</SelectItem><SelectItem value="low">Сначала дешевле</SelectItem><SelectItem value="high">Сначала дороже</SelectItem></SelectContent></Select>
         </div>
         {loading && <output className="empty-state">Собираем коллекцию…</output>}
         {loadError && <div className="empty-state" role="alert"><h3>Коллекция не загрузилась</h3><button className="button button-outline" onClick={() => window.location.reload()}>Попробовать ещё раз</button></div>}
         {!loading && !loadError && visibleProducts.length === 0 && (favoriteOnly ? <div className="empty-state"><Heart size={32} /><h3>Здесь пока нет избранного</h3><p>Сохраняйте понравившиеся товары с помощью сердечка.</p><button className="button button-outline" onClick={() => setFavoriteOnly(false)}>Показать товары раздела</button></div> : <UpcomingCategory category={activeCategory} />)}
-        <div className="product-grid">{visibleProducts.map(product => {
+        <div className="product-grid">{visibleProducts.slice(0, visibleLimit).map(product => {
           const variant = getVariant(product, variantChoices[product.id]);
           return <ProductCard key={product.id} product={product} variant={variant} choose={id => chooseVariant(product, id)} add={() => add(product, variant)} selected={cart.some(row => row.productId === product.id && row.variantId === variant.id)} favorite={favorites.includes(product.id)} toggleFavorite={() => toggleFavorite(product.id)} />;
         })}</div>
-        {visibleProducts.length > 0 && <p className="catalog-footnote">Фотографии, составы и цены — из основного каталога Амели. Данные показаны для демонстрации и не обновляются автоматически. Наличие и итоговую стоимость подтверждает команда.</p>}
+        {visibleProducts.length > visibleLimit && <button className="button button-outline" onClick={() => setVisibleLimit(limit => limit + 24)}>Показать ещё {productCount(Math.min(24, visibleProducts.length - visibleLimit))}</button>}
+        {visibleProducts.length > 0 && <p className="catalog-footnote">Каталог обновлён {new Date(catalogUpdatedAt).toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })} (МСК). Цены и составы загружаются из каталога Амели при публикации сайта. Наличие на дату и итоговую стоимость подтверждает команда.</p>}
       </section>
       </div>}
       {isHome && <>
@@ -260,7 +262,7 @@ export default function Home() {
       <section className="closing page-width" data-sc-act="flow"><div className="closing-inner"><span className="closing-symbol" aria-hidden="true">а.</span><div><h2>Полчаса на декор.<br />{' '}Больше времени <em>на вас.</em></h2><p>Выберите готовые решения и соберите подборку.<br />{' '}У каждой детали уже есть своё место.</p></div><div className="closing-actions"><a className="button button-primary" href={categoryHref('ready-solutions')}>Собрать свою свадьбу <ArrowUpRight size={20} /></a><a className="text-link" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Обсудить с Амели <Send size={17} /></a></div></div></section>
       </>}
     </main>
-    <footer className="site-footer page-width"><div className="footer-top"><Brand footer /><div><p>Амели Декор — готовые решения для вашей свадьбы.</p><a href="https://catalog.ameli-rental.ru" target="_blank" rel="noreferrer">Весь каталог аренды <ArrowUpRight size={15} /></a></div><div className="footer-contact"><a href="tel:+79850843855">+7 985 084-38-55</a><span>Клиентская линия: 09:00–21:00</span><a href="https://t.me/amelirental" target="_blank" rel="noreferrer">Телеграм <ArrowUpRight size={14} /></a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Амели Декор</span><span>Концепция свадебной коллекции. Демо-версия.</span><a href="https://catalog.ameli-rental.ru" target="_blank" rel="noreferrer">Основной сайт <ArrowUpRight size={13} /></a></div></footer>
+    <footer className="site-footer page-width"><div className="footer-top"><Brand footer /><div><p>Амели Декор — готовые решения для вашей свадьбы.</p><a href="https://catalog.ameli-rental.ru" target="_blank" rel="noreferrer">Весь каталог аренды <ArrowUpRight size={15} /></a></div><div className="footer-contact"><a href="tel:+79850843855">+7 985 084-38-55</a><span>Клиентская линия: 09:00–21:00</span><a href="https://t.me/amelirental" target="_blank" rel="noreferrer">Телеграм <ArrowUpRight size={14} /></a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Амели Декор</span><span>Свадебная коллекция. Подборка без бронирования.</span><a href="https://catalog.ameli-rental.ru" target="_blank" rel="noreferrer">Основной сайт <ArrowUpRight size={13} /></a></div></footer>
 
     {count > 0 && !cartOpen && !isCatalog && !isCategory && <div className="selection-dock"><div className="dock-thumbnails">{selectedProducts.slice(0,3).map(row => <img key={cartKey(row)} src={asset(row.variant.image)} alt="" />)}</div><div className="dock-copy"><strong>Ваша свадьба складывается</strong><span>Выбрано разделов: {selectedZones.size} · {money(total)}</span></div><button onClick={openCart}>Посмотреть <ArrowUpRight size={18} /></button></div>}
     <output className={`toast ${toast ? 'toast-visible' : ''}`} aria-live="polite">{toast && <><Check size={19} /><span>{toast}</span></>}</output>
@@ -273,7 +275,7 @@ export default function Home() {
         <div className="zone-progress" aria-label="Выбранные зоны">{cartCategories.map(c => <span key={c.id} className={selectedZones.has(c.id as Category) ? 'complete' : ''}>{selectedZones.has(c.id as Category) ? <Check size={13} /> : <span className="zone-dot" />}{c.shortLabel}</span>)}</div>
         {checkoutStep === 'cart' && <><div className="cart-items">{selectedProducts.map(({ product, variant, quantity }) => <div className="cart-item" key={cartKey({productId: product.id, variantId: variant.id})}>
           <img src={asset(variant.image)} alt={product.name} width="100" height="120" />
-          <div className="cart-item-content"><h3><a href={productHref(product.id, variant.id)}>{product.name}</a></h3><p className="cart-variant-label">{variant.label}</p><p>{variant.unit} · {variant.rentalDays} дн.</p>
+          <div className="cart-item-content"><h3><a href={productHref(product.id, variant.id)}>{product.name}</a></h3><p className="cart-variant-label">{variant.label}</p><p>{variant.unit} · {rentalPeriod(variant.rentalDays)}</p>
             <div className="cart-item-bottom"><div className="quantity-controls"><button aria-label={`Уменьшить количество: ${product.name}, ${variant.label}`} onClick={() => setCart(prev => changeQuantity(prev, product.id, variant.id, -1))}><Minus size={15} /></button><span aria-live="polite">{quantity}</span><button disabled={quantity >= MAX_QUANTITY} aria-label={`Увеличить количество: ${product.name}, ${variant.label}`} onClick={() => setCart(prev => changeQuantity(prev, product.id, variant.id, 1))}><Plus size={15} /></button></div><strong>{money(variant.price * quantity)}</strong></div>
             {variant.composition.length > 0 && <details className="cart-composition"><summary>Состав комплекта <Plus size={13} /></summary><p>Количество на один комплект</p><CompositionList variant={variant} compact /></details>}
           </div><button className="remove-item" aria-label={`Удалить: ${product.name}, ${variant.label}`} onClick={() => setCart(prev => changeQuantity(prev, product.id, variant.id, -quantity))}><Trash2 size={17} /></button>

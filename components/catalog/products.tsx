@@ -1,5 +1,5 @@
 import { ArrowUpRight, ArrowRight, Heart, Check, Plus, CalendarDays } from 'lucide-react';
-import { asset, money, type Product, type ProductVariant } from '../../data/catalog';
+import { asset, money, rentalPeriod, type Product, type ProductVariant } from '../../data/catalog';
 import { catalogCategories } from '../../data/categories';
 import { categoryHref, productHref, siteHref } from '../../lib/navigation';
 
@@ -32,12 +32,12 @@ type CardProps = { product: Product; variant: ProductVariant; choose: (id: strin
 export function ProductCard({ product, variant, choose, add, selected, favorite, toggleFavorite }: CardProps) {
   const href = productHref(product.id, variant.id);
   return <article className="product-card" aria-label={product.name}>
-    <div className="product-visual"><a className="product-image-button" href={href} aria-label={`Подробнее: ${product.name}`}><img src={asset(variant.image)} alt={product.name} width="800" height="880" loading="lazy" /><span className="view-details">Рассмотреть решение <ArrowUpRight size={18} /></span></a>{product.tag && <span className="product-tag">{product.tag}</span>}<button className={`favorite-button ${favorite ? 'is-favorite' : ''}`} onClick={toggleFavorite} aria-label={`${favorite ? 'Убрать из избранного' : 'В избранное'}: ${product.name}`} aria-pressed={favorite}><Heart size={20} /></button></div>
+    <div className="product-visual"><a className="product-image-button" href={href} aria-label={`Подробнее: ${product.name}`}><img src={asset(variant.image)} alt={product.name} width="800" height="880" loading="lazy" /><span className="view-details">Подробнее <ArrowUpRight size={18} /></span></a>{product.tag && <span className="product-tag">{product.tag}</span>}<button className={`favorite-button ${favorite ? 'is-favorite' : ''}`} onClick={toggleFavorite} aria-label={`${favorite ? 'Убрать из избранного' : 'В избранное'}: ${product.name}`} aria-pressed={favorite}><Heart size={20} /></button></div>
     <div className="product-category"><span>{catalogCategories.find(c => c.id === product.category)?.shortLabel}</span>{product.category !== "ceremony" && <Palette colors={product.palette} />}</div>
     <a className="product-title" href={href}><h3>{product.name}</h3></a><p className="product-subtitle">{product.category === "ceremony" ? variant.unit.replace("за зону", "Церемония") : product.subtitle}</p>
     <VariantPicker product={product} variant={variant} choose={choose} surface="card" />
     {variant.composition.length > 0 && <a className="composition-preview-link" href={`${href}#composition`}>Состав: {positions(variant.composition.length)}<ArrowUpRight size={15} /></a>}
-    <div className="product-bottom"><div aria-live="polite"><strong>{money(variant.price)}</strong><span>{variant.unit}</span><span>аренда {variant.rentalDays} дн.</span></div><button className={`add-button ${selected ? 'has-item' : ''}`} onClick={add} aria-label={`Добавить в корзину: ${product.name}, ${variant.label}`}>{selected ? <Check size={18} /> : <Plus size={18} />}<span>{selected ? 'Добавить ещё' : 'В мою свадьбу'}</span></button></div>
+    <div className="product-bottom"><div aria-live="polite"><strong>{money(variant.price)}</strong><span>{variant.unit}</span><span>{rentalPeriod(variant.rentalDays)}</span></div><button className={`add-button ${selected ? 'has-item' : ''}`} onClick={add} aria-label={`Добавить в корзину: ${product.name}, ${variant.label}`}>{selected ? <Check size={18} /> : <Plus size={18} />}<span>{selected ? 'Добавить ещё' : 'В мою свадьбу'}</span></button></div>
   </article>;
 }
 
@@ -50,7 +50,7 @@ export function ProductPage({ product, variant, choose, add, openCart, selected 
       <a className="eyebrow" href={category ? categoryHref(category.slug) : siteHref('catalog/')}>{category?.label}</a>
       <h1 className="detail-title">{product.name}</h1><p className="detail-description">{product.description}</p>{product.category !== "ceremony" && <Palette colors={product.palette} />}
       <VariantPicker product={product} variant={variant} choose={choose} surface="page" />
-      <div className="detail-price" aria-live="polite"><strong>{money(variant.price)}</strong><span>{variant.unit} · аренда {variant.rentalDays} дн.</span></div>
+      <div className="detail-price" aria-live="polite"><strong>{money(variant.price)}</strong><span>{variant.unit} · {rentalPeriod(variant.rentalDays)}</span></div>
       <button className="button button-primary full-width" onClick={add}>{selected ? 'Добавить ещё' : 'В мою свадьбу'} {selected ? <Check size={19} /> : <Plus size={19} />}</button>
       {selected && <button className="text-link detail-cart-link" onClick={openCart}>Перейти к подборке <ArrowRight size={18} /></button>}
       {variant.composition.length > 0 && <section id="composition" className="product-composition" aria-label="Состав выбранного варианта">
@@ -59,8 +59,8 @@ export function ProductPage({ product, variant, choose, add, openCart, selected 
         <CompositionList variant={variant} />
         <p className="composition-explanation">В выбранный вариант входят предметы из этого списка. Другие детали на фотографии могут не входить в комплект.</p>
       </section>}
-      <section className="source-description" aria-label="Описание выбранного варианта"><h2>Описание</h2>{variant.description.split(/\n+/).filter(Boolean).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</section>
-      <div className="detail-note"><strong>Предварительный расчёт</strong>Цены и составы взяты из основного каталога для демонстрации. Перед заказом команда подтвердит наличие на дату, итоговую стоимость и дополнительные услуги.</div>
+      {variant.description && <section className="source-description" aria-label="Описание выбранного варианта"><h2>Описание</h2>{variant.description.split(/\n+/).filter(Boolean).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</section>}
+      <div className="detail-note"><strong>Предварительный расчёт</strong>Цены и составы обновляются из каталога Амели при публикации сайта. Перед заказом команда подтвердит наличие на дату, итоговую стоимость и дополнительные услуги.</div>
       <div className="product-service-note"><CalendarDays size={19} /><p>Добавление в корзину не создаёт бронь.<br />Доставка и установка обсуждаются отдельно.</p></div>
       <a className="text-link" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Обсудить это решение <ArrowUpRight size={18} /></a>
     </div>

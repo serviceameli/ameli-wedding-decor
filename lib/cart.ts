@@ -42,7 +42,7 @@ export function cartTotal(cart: CartItem[], products: Product[]): number {
 export function cartTextLines(cart: CartItem[], products: Product[]): string[] {
   return resolveCart(cart, products).flatMap(({ product, variant, quantity }) => [
     `${product.name} — ${variant.label} × ${quantity}: ${new Intl.NumberFormat('ru-RU').format(variant.price * quantity)} ₽`,
-    `${variant.unit}, аренда ${variant.rentalDays} дн.`,
+    `${variant.unit}, ${variant.rentalDays ? `аренда ${variant.rentalDays} дн.` : 'период аренды уточняется'}`,
     ...(variant.composition.length ? ['Состав на выбранное количество комплектов:', ...variant.composition.map(item => `  ${item.name} — ${item.quantity * quantity} шт.`)] : []),
     '',
   ]);
