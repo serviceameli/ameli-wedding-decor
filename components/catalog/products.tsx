@@ -11,12 +11,15 @@ const positions = (n: number) => `${n} ${n % 10 === 1 && n % 100 !== 11 ? 'по�
 type VariantProps = { product: Product; variant: ProductVariant; choose: (id: string) => void; surface: 'card' | 'page' };
 export function VariantPicker({ product, variant, choose, surface }: VariantProps) {
   if (product.variants.length === 1) return <p className="single-variant">{product.kind === 'item' ? 'Отдельный предмет' : 'Одна комплектация'}</p>;
-  return <fieldset className={`variant-picker variant-picker-${surface} ${product.variants.some(v => v.label.length > 15) ? 'variant-picker-long' : ''}`}>
+  const photoOptions = product.kind === 'item';
+  return <fieldset className={`variant-picker variant-picker-${surface} ${photoOptions ? 'variant-picker-photos' : product.variants.some(v => v.label.length > 15) ? 'variant-picker-long' : ''}`}>
     <legend>{product.kind === 'item' ? 'Выберите вариант' : surface === 'card' ? `${product.variants.length} варианта комплектации` : 'Выберите комплектацию'}</legend>
-    <div className="variant-options">{product.variants.map(option => <label key={option.id} className={`variant-option ${option.id === variant.id ? 'is-active' : ''}`}>
+    <div className="variant-options">{product.variants.map(option => <label key={option.id} title={photoOptions ? option.label : undefined} className={`variant-option ${option.id === variant.id ? 'is-active' : ''}`}>
       <input type="radio" name={`${surface}-${product.id}`} value={option.id} checked={option.id === variant.id} onChange={() => choose(option.id)} />
+      {photoOptions && <img className="variant-option-photo" src={asset(option.image)} alt="" width="96" height="96" loading="lazy" />}
       <span className="variant-option-label">{option.label}</span><span className="variant-option-price">{money(option.price)}</span>
     </label>)}</div>
+    {photoOptions && <p className="variant-selected-label" aria-live="polite">{variant.label}</p>}
   </fieldset>;
 }
 

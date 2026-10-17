@@ -2,8 +2,17 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import snapshot from '../data/generated/catalog.json' with { type: 'json' };
 import { catalogProducts } from '../data/catalog.ts';
-import { catalogCategories } from '../data/categories.ts';
+import { catalogCategories, homeZoneCategories } from '../data/categories.ts';
 import { validateCatalogTree } from '../lib/catalog-tree.ts';
+
+void test('Homepage uses the seven admin wedding zones and their public covers', () => {
+  assert.deepEqual(homeZoneCategories.map(c => c.id), ['api-category-6876', 'api-category-6877', 'api-category-6878', 'api-category-7565', 'api-category-7411', 'ready-solutions', 'api-category-7412']);
+  for (const category of homeZoneCategories) {
+    assert.equal(category.parentId, undefined);
+    assert.ok(category.label.trim());
+    assert.match(category.image, /^https:\/\/(?:cdn\.frents\.ru|storage\.yandexcloud\.net)\//);
+  }
+});
 
 void test('The published snapshot has a company, timestamp, complete routes and usable variants', () => {
   assert.equal(snapshot.company.id, 30);

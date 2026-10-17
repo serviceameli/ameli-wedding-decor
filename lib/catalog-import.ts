@@ -31,16 +31,6 @@ const categoryIds: Record<number, string> = {
 };
 export const categoryId = (id: number) =>
   categoryIds[id] || `api-category-${id}`;
-const categoryParents: Record<number, string> = {
-  6603: 'tablecloths',
-  6602: 'tablecloths',
-  1976: 'decor',
-  1983: 'decor',
-  1991: 'decor',
-  6609: 'decor',
-  2010: 'decor',
-  6585: 'decor',
-};
 const textOnly = (text: string | null | undefined) =>
   (text || '')
     .replace(/<[^>]*>/g, ' ')
@@ -80,21 +70,27 @@ export function importCategories(raw: ApiCategory[], seeds: CatalogCategory[]) {
       const id = categoryId(row.id);
       const existing = categories.find((category) => category.id === id);
       const sourceUrl = `${CATALOG_URL}/catalog/${row.slug}`;
+      const image = publicImage(row.path_photo || row.image_preview_path);
       if (existing) {
         existing.sourceUrl = sourceUrl;
         existing.aliases = row.slug === existing.slug ? [] : [row.slug];
+        if (existing.label !== row.name.trim()) existing.description = '';
+        existing.label = row.name.trim();
+        existing.shortLabel = row.name.trim();
+        existing.image = image;
+        // Follow the current admin tree while keeping stable storefront URLs.
+        if (parent) existing.parentId = parent;
+        else delete existing.parentId;
       } else {
         categories.push({
           id,
           slug: row.slug,
           label: row.name.trim(),
           shortLabel: row.name.trim(),
-          image: publicImage(row.path_photo || row.image_preview_path),
+          image,
           description: '',
           sourceUrl,
-          ...(categoryParents[row.id] || parent
-            ? { parentId: categoryParents[row.id] || parent }
-            : {}),
+          ...(parent ? { parentId: parent } : {}),
         });
       }
       visit(row.children || [], id);
@@ -160,7 +156,9 @@ export function importProducts(
     };
   };
   return rows
-    .filter((row) => row.visible_site !== false && row.is_active !== false)
+    // Unassigned records and links to removed/private sections have no public
+    // catalog route; an active flag alone does not make them public.
+    .filter((row) => row.visible_site !== false && row.is_active !== false && row.categories_site?.some(category => known.has(categoryId(category.id))))
     .map((row) => {
       const ids = [
         ...new Set(
@@ -224,6 +222,7 @@ export function importProducts(
             'snake-tables',
             'settings',
             'flowers',
+            'api-category-6875',
           ].includes(id),
         ) && own.composition.length > 0;
       return {

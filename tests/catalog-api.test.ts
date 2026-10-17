@@ -64,6 +64,33 @@ void test('Importer preserves old category URL and accepts the API URL as an ali
   );
 });
 
+void test('Admin covers, labels and hierarchy update without breaking stable category links', () => {
+  const cover = 'https://cdn.frents.ru/ameli-dekor/01-ceremony.webp';
+  const categories = importCategories([
+    {
+      id: 6876, company_id: 30, name: 'Зона церемонии', slug: 'zona-tseremonii-ada', path_photo: cover,
+      children: [{ id: 6589, company_id: 30, name: 'Зоны церемонии', slug: 'zony-tseremonii-fow', path_photo: cover }],
+    },
+    { id: 1989, company_id: 30, name: 'Фотозона', slug: 'gotovye-reshenija', path_photo: cover },
+    { id: 2010, company_id: 30, name: 'Навигация', slug: 'navigatsiya', path_photo: 'https://untrusted.example/cover.jpg' },
+  ], seedCategories);
+  const ceremony = categories.find(c => c.id === 'ceremony')!;
+  assert.equal(ceremony.parentId, 'api-category-6876');
+  assert.equal(ceremony.slug, 'ceremony');
+  assert.equal(ceremony.image, cover);
+  const photozone = categories.find(c => c.id === 'ready-solutions')!;
+  assert.equal(photozone.label, 'Фотозона');
+  assert.equal(photozone.description, '');
+  assert.equal(photozone.image, cover);
+  assert.equal(photozone.slug, 'ready-solutions');
+  const navigation = categories.find(c => c.id === 'api-category-2010')!;
+  assert.equal(navigation.parentId, undefined);
+  assert.equal(navigation.image, 'placeholder.svg');
+  const counts = categoryCounts([{ category: 'ceremony' }], categories);
+  assert.equal(counts.get('api-category-6876'), 1);
+  assert.equal(counts.get('ready-solutions'), undefined);
+});
+
 void test('Only verified prices, per-variant compositions and safe public fields are exported', () => {
   const base = decor(1, {
     decors_repaint: [
@@ -123,6 +150,13 @@ void test('Multi-category items appear in each category without double-counting 
   assert.equal(counts.get('plates'), 1);
   assert.equal(counts.get('glassware'), 1);
   assert.equal(counts.get('dishes'), 1);
+});
+
+void test('Unassigned records and removed category links stay out of the public catalog', () => {
+  const products = importProducts([decor(1), decor(2, { categories_site: [] }), decor(3, { categories_site: [{ id: 999999, slug: 'removed' }] })], new Map(), seedCategories);
+  assert.deepEqual(products.map(product => product.id), ['ameli-1']);
+  const [mixed] = importProducts([decor(4, { categories_site: [{ id: 1965, slug: 'tarelki' }, { id: 999999, slug: 'removed' }] })], new Map(), seedCategories);
+  assert.deepEqual(mixed.categoryIds, ['plates']);
 });
 
 void test('Pagination loads every page and rejects duplicate or changing results', async () => {

@@ -8,12 +8,13 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build && node --experimental-strip-types scripts/build-pages.mjs",
+    "build": "tsc --noEmit && vite build && node --experimental-strip-types scripts/build-pages.mjs && node --experimental-strip-types scripts/check-structured-data.mjs",
     "start": "vite preview --host 127.0.0.1",
-    "lint": "oxlint app components/catalog components/home data lib tests vite.config.ts",
+    "lint": "oxlint app components/catalog components/home components/content data lib tests vite.config.ts",
     "format": "oxfmt",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "schema:check": "node --experimental-strip-types scripts/check-structured-data.mjs",
     "doctor": "node --experimental-strip-types scripts/doctor.mjs",
     "catalog:sync": "node --experimental-strip-types scripts/sync-catalog.mjs"
   },

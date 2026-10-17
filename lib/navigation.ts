@@ -12,6 +12,7 @@ export function resolveRoute() {
   const path = decodeURI(window.location.pathname).slice(siteBase().length).replace(/^\/+|\/+$/g, '').replace(/\/index\.html$/, '');
   if (!path || path === 'index.html') return { kind: 'home' as const };
   if (path === 'catalog') return { kind: 'catalog' as const };
+  if (['about', 'how-it-works', 'portfolio', 'faq', 'contacts'].includes(path)) return { kind: 'information' as const, page: path };
   const category = catalogCategories.find(c => [c.slug, ...(c.aliases || [])].some(slug => `catalog/${slug}` === path));
   if (category) return { kind: 'category' as const, category };
   if (path.startsWith('solution/')) return { kind: 'product' as const, productId: path.slice('solution/'.length) };

@@ -6,7 +6,7 @@ import {
   assertCompany,
   readAllDecor,
 } from '../lib/catalog-api.ts';
-import { importCategories, importProducts } from '../lib/catalog-import.ts';
+import { categoryId, importCategories, importProducts } from '../lib/catalog-import.ts';
 
 if (fs.existsSync('.env')) process.loadEnvFile('.env');
 const base = process.env.AMELI_API_URL || API_URL;
@@ -38,6 +38,8 @@ for (let attempt = 0; attempt < 2; attempt++) {
     console.warn('Повторяем загрузку полного каталога после ошибки.');
   }
 }
+const knownCategories = new Set(categories.map(category => category.id));
+rows = rows.filter(row => row.visible_site !== false && row.is_active !== false && row.categories_site?.some(category => knownCategories.has(categoryId(category.id))));
 if (!rows.length)
   throw new Error(
     'Refusing to replace the published catalogue with an empty response',
@@ -47,7 +49,7 @@ for (const row of rows) {
   // Full details for complete wedding sets and explicitly linked hidden variants.
   if (
     row.categories_site?.some((category) =>
-      [6589, 6587, 6629, 6630, 6594, 6591].includes(category.id),
+      [6589, 6587, 6629, 6630, 6594, 6591, 6875].includes(category.id),
     )
   )
     ids.add(row.id);

@@ -6,47 +6,40 @@ import { Sheet, SheetContent, SheetTitle, SheetDescription, SheetClose } from '@
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { catalogProvider, catalogUpdatedAt, rentalPeriod, money, asset, type Product, type ProductVariant, type Category } from '@/data/catalog';
-import { catalogCategories, readySolutionCategories } from '@/data/categories';
+import { catalogCategories, readySolutionCategories, homeZoneCategories } from '@/data/categories';
 import { categoryDescendants, belongsToBranch } from '@/lib/catalog-tree';
 import { CatalogNavigation, CatalogBreadcrumb, UpcomingCategory } from '@/components/catalog/navigation';
-import { siteHref, categoryHref, productHref, resolveRoute } from '@/lib/navigation';
+import { siteBase, siteHref, categoryHref, productHref, resolveRoute } from '@/lib/navigation';
 import { cartTotal, changeQuantity, normalizeCart, resolveCart, cartKey, cartTextLines, localToday, MAX_QUANTITY, type CartItem } from '@/lib/cart';
 
 import { getVariant, minimumPrice, normalizeVariantChoices } from '@/lib/variants';
 import { HomeProof, HomePackage, HomePalette, HomeAbout, HomeWorks, HomeProcess } from '@/components/home/sections';
 import { ProductCard, ProductPage, CompositionList } from '@/components/catalog/products';
+import { InformationPage } from '@/components/content/pages';
+import { FAQ } from '@/data/site-content';
+import { buildStructuredData, schemaPageForPath, serializeStructuredData, STRUCTURED_DATA_ID } from '@/lib/structured-data';
+import { TactileNavigation } from '@/components/home/tactile';
 
 const CHOICES_KEY = 'ameli-wedding-variants-v1';
 function readStored(key: string): unknown { try { return JSON.parse(localStorage.getItem(key) || 'null'); } catch { return null; } }
 const STORE_KEY = 'ameli-wedding-selection-v1';
 const FAVORITES_KEY = 'ameli-wedding-favorites-v1';
-const NAV = [{ href: 'catalog/', label: 'Каталог' }, { href: '#how', label: 'Как это работает' }, { href: '#works', label: 'Наши работы' }, { href: '#about', label: 'О нас' }];
-const FAQ = [
-  ['Что я успею за полчаса?', 'Выбрать готовые решения для нужных зон, сравнить комплектации и собрать подборку с предварительной стоимостью. Не нужно подбирать каждый предмет и согласовывать сочетания с нуля. Проверка даты, визуализация для площадки и подтверждение бронирования — следующие этапы.'],
-  ['Как я пойму, что получится на моей свадьбе?', 'В каталоге вы видите готовое сочетание и точный состав выбранного варианта. Для вашей свадьбы мы делаем визуализацию: показываем, как декор будет выглядеть на площадке. Она и согласованный состав становятся ориентиром для оформления.'],
-  ['Готовое решение можно сделать в наших цветах?', 'Да, у нас более 100 цветов в палитре текстиля. Вы выбираете готовое сочетание, а мы помогаем подобрать оттенок под вашу свадьбу. Доступность конкретного текстиля на дату и стоимость замены проверим при подготовке предложения.'],
-  ['Чем отличаются базовый, оптимальный и премиум?', 'Количеством и набором деталей. При переключении меняются цена и состав: вы сразу видите, за что платите. У некоторых решений есть другие варианты — например, по количеству посадочных мест.'],
-  ['Как рассчитать количество и полный бюджет?', 'У каждой цены есть единица расчёта: за зону, комплект на определённое число гостей или одну сервировку. Добавьте нужное количество в корзину. Доставка, монтаж, демонтаж и дополнительные услуги рассчитываются отдельно по дате и площадке.'],
-  ['Флористика и всё, что на фото, входят в комплект?', 'В комплект входят позиции из состава выбранного варианта. Цветы, свечи и другие детали на фотографии могут быть дополнительными. До бронирования фиксируем выбранный состав и визуализацию, чтобы результат был понятен заранее.'],
-  ['Подборка в корзине уже бронирует декор?', 'Корзина сохраняет ваш выбор на этом устройстве. Наличие на дату и итоговую стоимость подтверждает команда. Заявки через сайт пока не отправляются, оплата и бронирование не создаются. Подборку можно скачать и обсудить с нами.'],
-];
-
+const NAV = [{ href: 'catalog/', label: 'Каталог' }, { href: 'how-it-works/', label: 'Как это работает' }, { href: 'portfolio/', label: 'Наши работы' }, { href: 'about/', label: 'О нас' }, { href: 'contacts/', label: 'Контакты' }];
 type Inquiry = { name: string; phone: string; date: string; venue: string; guests: string; comment: string };
 const EMPTY_INQUIRY: Inquiry = { name: '', phone: '', date: '', venue: '', guests: '', comment: '' };
 
 function Brand({ footer = false }: { footer?: boolean }) {
-  return <a href={siteHref()} className={`brand ${footer ? 'brand-footer' : ''}`} aria-label="Амели Декор, на главную"><span>Амели Декор<span className="brand-dot">.</span></span><small>ГОТОВЫЕ РЕШЕНИЯ ДЛЯ ВАШЕЙ СВАДЬБЫ</small></a>;
+  return <a href={siteHref()} className={`brand ${footer ? 'brand-footer' : ''}`} aria-label="Амели Декор, на главную"><span>Амели декор<span className="brand-dot">.</span></span><small>ГОТОВЫЕ РЕШЕНИЯ ДЛЯ ВАШЕЙ СВАДЬБЫ</small></a>;
 }
 function CloseButton({ onClick }: { onClick: () => void }) { return <button className="icon-button close-button" aria-label="Закрыть" onClick={onClick}><X size={23} /></button>; }
 function productCount(count: number) { const last = count % 10, lastTwo = count % 100; return `${count} ${last === 1 && lastTwo !== 11 ? 'товар' : last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14) ? 'товара' : 'товаров'}`; }
-function solutionCount(count: number) { const last = count % 10, lastTwo = count % 100; return `${count} ${last === 1 && lastTwo !== 11 ? 'решение' : last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14) ? 'решения' : 'решений'}`; }
 function CategoryDirectory({ products }: { products: Product[] }) {
   return <section id="wedding-zones" className="category-directory section-space page-width">
-    <div className="section-heading"><div><p className="eyebrow">КАТАЛОГ СВАДЕБНОГО ДЕКОРА</p><h2 className="directory-title">Соберите свадьбу <em>по зонам.</em></h2></div><p>Церемония, столы, сервировка и цветы.<br />{' '}В каждом разделе — готовые комплекты с составом и ценой.</p></div>
-    <div className="directory-grid">{readySolutionCategories.map((category, index) => <a className="directory-card" key={category.id} href={categoryHref(category.slug)}>
+    <div className="section-heading"><div><p className="eyebrow">КАТАЛОГ СВАДЕБНОГО ДЕКОРА</p><h2 className="directory-title">Соберите свадьбу <em>по зонам.</em></h2></div><p>От церемонии до фуршета.<br />{' '}Выберите зону и посмотрите её коллекцию декора.</p></div>
+    <div className="directory-grid">{homeZoneCategories.map((category, index) => <a className="directory-card" key={category.id} href={categoryHref(category.slug)}>
       <div className="directory-image"><img src={asset(category.image)} alt={category.label} width="600" height="500" loading="lazy" /><span className="directory-number">0{index + 1}</span></div>
       <div className="directory-caption"><h3>{category.label}</h3><ArrowUpRight size={22} /></div>
-      <span className="directory-count">{solutionCount(products.filter(p => belongsToBranch(p, new Set([category.id]))).length)} в коллекции</span>
+      <span className="directory-count">{productCount(products.filter(p => belongsToBranch(p, categoryDescendants(category.id, catalogCategories))).length)} в коллекции</span>
     </a>)}</div>
     <a className="text-link directory-addons" href={siteHref('catalog/')}>Посуда, мебель и отдельный декор <ArrowUpRight size={18} /></a>
   </section>;
@@ -156,7 +149,7 @@ export default function Home() {
   function add(product: Product, variant: ProductVariant) {
     const current = cart.find(row => row.productId === product.id && row.variantId === variant.id)?.quantity ?? 0;
     if (current >= MAX_QUANTITY) { setToast('Для большего количества свяжитесь с командой'); return; }
-    setCart(prev => changeQuantity(prev, product.id, variant.id, 1)); setToast(`«${product.name}» · ${variant.label} — в вашей подборке`);
+    setCart(prev => changeQuantity(prev, product.id, variant.id, 1)); setToast(`В подборку добавлено: «${product.name}» · ${variant.label}`);
   }
   function toggleFavorite(id: string) { setFavorites(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]); }
   function goToCatalog(nextCategory: Category = 'all') { const target = catalogCategories.find(c => c.id === nextCategory); window.location.href = target ? categoryHref(target.slug) : siteHref('catalog/'); }
@@ -183,13 +176,30 @@ export default function Home() {
   const featuredProduct = products.find(product => product.category === 'round-tables' && product.name.includes('Изысканный жемчуг') && product.variants.length > 1) || products.find(product => product.category === 'round-tables' && product.variants.length > 1);
   const featuredVariant = featuredProduct ? getVariant(featuredProduct, variantChoices[featuredProduct.id]) : null;
 
+  useEffect(() => {
+    if (!ready) return;
+    const page = schemaPageForPath(window.location.pathname.slice(siteBase().length), catalogCategories, products);
+    let script = document.getElementById(STRUCTURED_DATA_ID) as HTMLScriptElement | null;
+    if (!page) { script?.remove(); return; }
+    if (!script) {
+      script = document.createElement('script');
+      script.id = STRUCTURED_DATA_ID;
+      script.type = 'application/ld+json';
+      document.head.appendChild(script);
+    }
+    script.textContent = serializeStructuredData(buildStructuredData(page, catalogCategories, products, {
+      selectedVariantId: page.productId ? variantChoices[page.productId] : undefined,
+      listedProducts: visibleProducts.slice(0, visibleLimit),
+    }));
+  }, [ready, products, variantChoices, visibleProducts, visibleLimit]);
+
   return <>
     <div id="top" />
     <a href={siteHref('catalog/')} className="skip-link">Перейти к готовым решениям</a>
     <header className="site-header">
       <div className="header-inner">
         <Brand />
-        <nav className="desktop-nav" aria-label="Основная навигация">{NAV.map(link => <a key={link.href} href={siteHref(link.href)}>{link.label}</a>)}</nav>
+        <nav className="desktop-nav" aria-label="Основная навигация">{NAV.map(link => <a key={link.href} href={siteHref(link.href)} aria-current={window.location.pathname.endsWith(`/${link.href}`) ? 'page' : undefined}>{link.label}</a>)}</nav>
         <div className="header-actions">
           <a className="header-contact" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Обсудить свадьбу <ArrowUpRight size={16} /></a>
           <button className={`icon-button ${favoriteOnly ? 'selected' : ''}`} aria-label={`Избранное, ${favorites.length}`} onClick={() => { window.location.href = siteHref('catalog/?favorites=1#collection'); }}><Heart size={21} />{favorites.length > 0 && <span className="mini-count">{favorites.length}</span>}</button>
@@ -201,17 +211,21 @@ export default function Home() {
     <main>
       {isHome && <>
       <section className="hero page-width" ref={sceneRef} data-sc-act="flow">
-        <div className="hero-copy">
-          <p className="eyebrow"><span className="little-line" /> СВАДЕБНЫЙ ДЕКОР В АРЕНДУ</p>
-          <h1>Декор вашей<br />{' '}свадьбы.<br />{' '}<em>За полчаса.</em></h1>
-          <p className="hero-description">Соберите подборку из готовых решений — без выбора каждой детали и лишних согласований. Сочетания уже продуманы. Состав и бюджет видны сразу.</p>
-          <div className="hero-ctas"><a className="button button-primary" href={categoryHref('ready-solutions')}>Собрать свою свадьбу <ArrowUpRight size={20} /></a><a className="text-link" href="#expectation">Увидеть результат заранее <ArrowRight size={17} /></a></div>
-          <p className="hero-location">Амели Декор · Москва и Московская область</p>
+        <div className="hero-masthead"><p className="eyebrow">СВАДЕБНЫЙ ДЕКОР В АРЕНДУ</p><span>МОСКВА И МОСКОВСКАЯ ОБЛАСТЬ</span></div>
+        <div className="hero-scene">
+          <figure className="hero-main"><img src={asset('portfolio-680.jpg')} alt="Сервировка Амели: пудровые бокалы, светлый текстиль и цветы в мягком дневном свете" width="600" height="900" fetchPriority="high" /><figcaption>Сервировка из портфолио Амели</figcaption></figure>
+          <div className="hero-copy">
+            <p className="hero-kicker">Готовые сочетания для вашей свадьбы</p>
+            <h1>Декор вашей<br />{' '}свадьбы.<br />{' '}<em>За полчаса.</em></h1>
+            <p className="hero-welcome">Выбирайте то, что нравится. Мебель, текстиль и сервировка уже собраны в красивые сочетания.</p>
+            <div className="hero-ctas"><a className="button button-primary" href={siteHref('#wedding-zones')}>Собрать свою свадьбу <ArrowUpRight size={20} /></a></div>
+          </div>
+          <div className="hero-heart" aria-hidden="true"><img src={asset('brand/velvet-heart.png')} alt="" width="1080" height="1080" /></div>
         </div>
-        <div className="hero-collage">
-          <figure className="hero-main"><img src={asset('hero.jpg')} alt="Белые цветочные композиции, свечи и сервировка на свадьбе с декором Амели" width="1280" height="854" fetchPriority="high" /><figcaption>Настоящая свадьба с декором Амели</figcaption></figure>
-          <figure className="hero-detail"><img src={asset('editorial.jpg')} alt="Свадебный стол с зелёными стульями и белой флористикой" width="905" height="1280" /><figcaption>Вы видите заранее.<br />{' '}<em>Мы воплощаем.</em></figcaption></figure>
-          <span className="hero-side-note">13 ЛЕТ В ДЕКОРЕ СОБЫТИЙ</span>
+        <div className="hero-editorial-note">
+          <span className="hero-edition">АМЕЛИ ДЕКОР<br />СВАДЕБНАЯ КОЛЛЕКЦИЯ</span>
+          <p className="hero-description">Соберите подборку из готовых решений. Сочетания уже продуманы, состав и бюджет видны сразу.</p>
+          <a className="text-link" href="#expectation">Увидеть результат заранее <ArrowRight size={17} /></a>
         </div>
       </section>
 
@@ -222,7 +236,9 @@ export default function Home() {
       </div>
 
       </>}
-      {!isHome && <CatalogBreadcrumb categoryId={activeCategory?.id || routeProduct?.category} productName={routeProduct?.name} isCatalog={isCatalog} />}
+      {isHome && <TactileNavigation />}
+      {!isHome && route.kind !== 'information' && <CatalogBreadcrumb categoryId={activeCategory?.id || routeProduct?.category} productName={routeProduct?.name} isCatalog={isCatalog} />}
+      {route.kind === 'information' && <InformationPage page={route.page} questions={FAQ} />}
       {isHome && <CategoryDirectory products={products} />}
       {route.kind === 'product' && loading && <output className="empty-state">Открываем решение…</output>}
       {route.kind === 'product' && routeProduct && routeVariant && <ProductPage product={routeProduct} variant={routeVariant} choose={id => chooseVariant(routeProduct, id)} add={() => add(routeProduct, routeVariant)} openCart={openCart} selected={cart.some(row => row.productId === routeProduct.id && row.variantId === routeVariant.id)} />}
@@ -259,19 +275,19 @@ export default function Home() {
 
       <section id="questions" className="faq-section page-width section-space" data-sc-act="flow"><div className="faq-intro"><p className="eyebrow">ПЕРЕД ТЕМ КАК ВЫБРАТЬ</p><h2>Чтобы выбирать<br />{' '}<em>было спокойно.</em></h2><p>Про бюджет, визуализацию<br />{' '}и следующий шаг после выбора.</p><a className="text-link" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Задать свой вопрос <ArrowUpRight size={18} /></a></div><div className="faq-list">{FAQ.map(([question, answer]) => <details key={question}><summary>{question}<Plus size={19} /></summary><p>{answer}</p></details>)}</div></section>
 
-      <section className="closing page-width" data-sc-act="flow"><div className="closing-inner"><span className="closing-symbol" aria-hidden="true">а.</span><div><h2>Полчаса на декор.<br />{' '}Больше времени <em>на вас.</em></h2><p>Выберите готовые решения и соберите подборку.<br />{' '}У каждой детали уже есть своё место.</p></div><div className="closing-actions"><a className="button button-primary" href={categoryHref('ready-solutions')}>Собрать свою свадьбу <ArrowUpRight size={20} /></a><a className="text-link" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Обсудить с Амели <Send size={17} /></a></div></div></section>
+      <section className="closing page-width" data-sc-act="flow"><div className="closing-inner"><figure className="closing-object" aria-hidden="true"><img src={asset('brand/velvet-heart.png')} alt="" width="1080" height="1080" loading="lazy" /></figure><div><h2>Выберите декор<br />{' '}<em>для вашей свадьбы.</em></h2><p>Выберите готовые решения и соберите подборку.<br />{' '}У каждой детали уже есть своё место.</p></div><div className="closing-actions"><a className="button button-primary" href={siteHref('#wedding-zones')}>Собрать свою свадьбу <ArrowUpRight size={20} /></a><a className="text-link" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Обсудить с Амели <Send size={17} /></a></div></div></section>
       </>}
     </main>
-    <footer className="site-footer page-width"><div className="footer-top"><Brand footer /><div><p>Амели Декор — готовые решения для вашей свадьбы.</p><a href="https://catalog.ameli-rental.ru" target="_blank" rel="noreferrer">Весь каталог аренды <ArrowUpRight size={15} /></a></div><div className="footer-contact"><a href="tel:+79850843855">+7 985 084-38-55</a><span>Клиентская линия: 09:00–21:00</span><a href="https://t.me/amelirental" target="_blank" rel="noreferrer">Телеграм <ArrowUpRight size={14} /></a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Амели Декор</span><span>Свадебная коллекция. Подборка без бронирования.</span><a href="https://catalog.ameli-rental.ru" target="_blank" rel="noreferrer">Основной сайт <ArrowUpRight size={13} /></a></div></footer>
+    <footer className="site-footer page-width"><div className="footer-top"><Brand footer /><div><p>Готовые решения для вашей свадьбы.</p><a href="https://catalog.ameli-rental.ru" target="_blank" rel="noreferrer">Весь каталог аренды <ArrowUpRight size={15} /></a></div><div className="footer-contact"><a href="tel:+79850843855">+7 985 084-38-55</a><span>Клиентская линия: 09:00–21:00</span><a href="https://t.me/amelirental" target="_blank" rel="noreferrer">Телеграм <ArrowUpRight size={14} /></a></div></div><nav className="footer-pages" aria-label="Информация об Амели">{NAV.map(link => <a key={link.href} href={siteHref(link.href)}>{link.label}</a>)}<a href={siteHref('faq/')}>Вопросы и ответы</a></nav><div className="footer-bottom"><span>© {new Date().getFullYear()} Амели декор</span><span>Свадебная коллекция. Подборка без бронирования.</span><a href="https://catalog.ameli-rental.ru" target="_blank" rel="noreferrer">Основной сайт <ArrowUpRight size={13} /></a></div></footer>
 
     {count > 0 && !cartOpen && !isCatalog && !isCategory && <div className="selection-dock"><div className="dock-thumbnails">{selectedProducts.slice(0,3).map(row => <img key={cartKey(row)} src={asset(row.variant.image)} alt="" />)}</div><div className="dock-copy"><strong>Ваша свадьба складывается</strong><span>Выбрано разделов: {selectedZones.size} · {money(total)}</span></div><button onClick={openCart}>Посмотреть <ArrowUpRight size={18} /></button></div>}
     <output className={`toast ${toast ? 'toast-visible' : ''}`} aria-live="polite">{toast && <><Check size={19} /><span>{toast}</span></>}</output>
 
-    <Sheet open={menuOpen} onOpenChange={setMenuOpen}><SheetContent className="menu-sheet" showCloseButton={false}><CloseButton onClick={() => setMenuOpen(false)} /><SheetTitle className="sheet-heading">Ваша свадьба с Амели Декор</SheetTitle><SheetDescription>Готовые решения для вашей свадьбы</SheetDescription><nav className="mobile-navigation">{NAV.map(link => <a key={link.href} href={siteHref(link.href)} onClick={() => setMenuOpen(false)}>{link.label}<ArrowUpRight /></a>)}</nav><a className="button button-primary" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Обсудить свадьбу <Send size={18} /></a></SheetContent></Sheet>
+    <Sheet open={menuOpen} onOpenChange={setMenuOpen}><SheetContent className="menu-sheet" showCloseButton={false}><CloseButton onClick={() => setMenuOpen(false)} /><SheetTitle className="sheet-heading">Ваша свадьба с Амели Декор</SheetTitle><SheetDescription>Готовые решения для вашей свадьбы</SheetDescription><nav className="mobile-navigation">{NAV.map(link => <a key={link.href} href={siteHref(link.href)} onClick={() => setMenuOpen(false)}>{link.label}<ArrowUpRight /></a>)}<a href={siteHref('catalog/?favorites=1#collection')} onClick={() => setMenuOpen(false)}>Избранное <Heart size={21} /></a><a href={siteHref('faq/')} onClick={() => setMenuOpen(false)}>Вопросы и ответы <ArrowUpRight /></a></nav><a className="button button-primary" href="https://t.me/amelirental" target="_blank" rel="noreferrer">Обсудить свадьбу <Send size={18} /></a></SheetContent></Sheet>
 
 
     <Sheet open={cartOpen} onOpenChange={setCartOpen}><SheetContent className="cart-sheet" showCloseButton={false}><CloseButton onClick={() => setCartOpen(false)} /><div className="cart-header"><p className="eyebrow">ДЕКОР ВАШЕЙ СВАДЬБЫ</p><SheetTitle className="sheet-heading">{checkoutStep === 'cart' ? 'Моя свадьба' : checkoutStep === 'form' ? 'Детали вашего дня' : 'Ваша подборка готова'}</SheetTitle><SheetDescription>{checkoutStep === 'cart' ? 'Добавляйте то, что нравится. Всё выбранное сохранится на этом устройстве.' : checkoutStep === 'form' ? 'Заполните данные, чтобы посмотреть, как будет выглядеть заявка.' : 'Это демонстрация. Заявка не отправлена, декор не забронирован.'}</SheetDescription></div>
-      {count === 0 ? <div className="empty-cart"><ShoppingBag size={45} strokeWidth={1} /><h3>Пока только предвкушение</h3><p>Добавьте первое решение,<br />{' '}и ваша свадьба начнёт складываться.</p><SheetClose className="button button-primary" onClick={() => goToCatalog()}>Выбрать декор <ArrowUpRight size={20} /></SheetClose></div> : <>
+      {count === 0 ? <div className="empty-cart"><img className="empty-cart-object" src={asset('brand/velvet-heart.png')} alt="" width="1080" height="1080" /><h3>Пока только предвкушение</h3><p>Добавьте первое решение,<br />{' '}и ваша свадьба начнёт складываться.</p><SheetClose className="button button-primary" onClick={() => goToCatalog()}>Выбрать декор <ArrowUpRight size={20} /></SheetClose></div> : <>
         <div className="zone-progress" aria-label="Выбранные зоны">{cartCategories.map(c => <span key={c.id} className={selectedZones.has(c.id as Category) ? 'complete' : ''}>{selectedZones.has(c.id as Category) ? <Check size={13} /> : <span className="zone-dot" />}{c.shortLabel}</span>)}</div>
         {checkoutStep === 'cart' && <><div className="cart-items">{selectedProducts.map(({ product, variant, quantity }) => <div className="cart-item" key={cartKey({productId: product.id, variantId: variant.id})}>
           <img src={asset(variant.image)} alt={product.name} width="100" height="120" />

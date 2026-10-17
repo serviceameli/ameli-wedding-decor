@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { catalogCategories, type CatalogCategory } from '../data/categories.ts';
+import { catalogCategories, homeZoneCategories, type CatalogCategory } from '../data/categories.ts';
 import { demoProducts } from '../data/fixtures.ts';
 import { categoryChildren, categoryCounts, categoryDescendants, categoryTrail, validateCatalogTree } from '../lib/catalog-tree.ts';
 const sample = (id: string, parentId?: string): CatalogCategory => ({id, slug:id, label:id, shortLabel:id, image:'', description:'', sourceUrl:'', parentId});
@@ -22,14 +22,16 @@ void test('Hierarchy rejects duplicate IDs, duplicate routes, missing parents an
   assert.throws(()=>validateCatalogTree([sample('one','two'),sample('two','one')]),/cycle/);
   assert.doesNotThrow(()=>validateCatalogTree([sample('one'),sample('two','one')]));
 });
-void test('Existing solution links and all fourteen products remain in their original branches', () => {
+void test('Existing solution links and all fourteen fixtures remain reachable through the current wedding zones', () => {
   validateCatalogTree(catalogCategories);
-  const readyIds = categoryDescendants('ready-solutions',catalogCategories);
+  const zoneIds = new Set(homeZoneCategories.map(c=>c.id));
+  const readyIds = new Set(homeZoneCategories.flatMap(c=>[...categoryDescendants(c.id,catalogCategories)]));
   assert.equal(demoProducts.filter(p=>readyIds.has(p.category)).length,demoProducts.length);
-  assert.equal(categoryCounts(demoProducts,catalogCategories).get('ready-solutions'),14);
+  const counts = categoryCounts(demoProducts,catalogCategories);
+  assert.equal(homeZoneCategories.reduce((total,c)=>total+(counts.get(c.id)||0),0),14);
   for(const slug of ['ceremony','round-tables','rectangular-tables','snake-tables','tableware','floral-compositions']) {
     const node=catalogCategories.find(n=>n.slug===slug);
-    assert(node);assert.equal(node.parentId,'ready-solutions');
+    assert(node);assert.ok(zoneIds.has(categoryTrail(node.id,catalogCategories)[0].id));
   }
   assert.equal(categoryCounts(demoProducts,catalogCategories).get('dishes') || 0,0);
 });
